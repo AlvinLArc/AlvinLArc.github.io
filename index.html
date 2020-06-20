@@ -86,11 +86,46 @@
           
           
           
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="iconfont icon-category-fill"></i>
                 Categories
               </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://hexo.fluid-dev.com/docs/guide/" target="_blank" rel="noopener">
+                    
+                    Grasshopper
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://hexo.fluid-dev.com/docs/example/" target="_blank" rel="noopener">
+                    
+                    Blender
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://hexo.fluid-dev.com/docs/example/" target="_blank" rel="noopener">
+                    
+                    Python
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://hexo.fluid-dev.com/docs/icon/" target="_blank" rel="noopener">
+                    
+                    Substance Designer
+                  </a>
+                
+              </div>
             </li>
           
         
@@ -163,6 +198,92 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/06/21/test02/">test02</a>
+
+      <a href="/2020/06/21/test02/" class="index-excerpt">
+        
+        
+          
+        
+        <div>士大夫阿里山的房间阿里健康受到符合
+</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-06-21
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Grasshopper/">Grasshopper</a>
+            
+              <a href="/categories/Python/">Python</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/tag2/">tag2</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/06/21/test01/">test01</a>
+
+      <a href="/2020/06/21/test01/" class="index-excerpt">
+        
+        
+          
+        
+        <div>梁田啊树的发射点发散的ff
+</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-06-21
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Grasshopper/">Grasshopper</a>
+            
+              <a href="/categories/Python/">Python</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/tag1/">tag1</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
 
   <div class="row mx-auto index-card">
     
@@ -259,6 +380,29 @@ Quick</div>
   </div>
 </div>
   
+
+  
+    <!-- APlayer 音乐播放器 -->
+    <div id="aplayer"></div>
+    <script defer src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+<script type="text/javascript">
+  var oldLoadAp = window.onload;
+  window.onload = function () {
+    oldLoadAp && oldLoadAp();
+
+    new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      autoplay: 'false' === 'true',
+      loop: 'all',
+      order: 'random',
+      theme: '#b7daff',
+      preload: 'none',
+      audio: [{"name":"name","artist":"artist","url":"/songs/test.mp3","cover":"/img/cover.jpg"},{"name":"name","artist":"artist","url":"https://...url.mp3","cover":"https://...cover.jpg"}]
+    });
+  }
+</script>
 
   
 
