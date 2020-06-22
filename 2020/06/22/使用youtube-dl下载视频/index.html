@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/default.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="grasshopper学习中，blender学习中，python不会中，substance designer不会中">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>使用youtube-dl下载视频 - 建筑淆淆士小梁的淆习笔记</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liang</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                Portfolio
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://alvinlarc.github.io/archives/" target="_blank" rel="noopener">
+                    
+                    Grasshopper
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://alvinlarc.github.io/archives/" target="_blank" rel="noopener">
+                    
+                    Blender
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://alvinlarc.github.io/archives/" target="_blank" rel="noopener">
+                    
+                    Python
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://alvinlarc.github.io/archives/" target="_blank" rel="noopener">
+                    
+                    Substance Designer
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-22 17:30">
+      June 22, 2020 pm
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      44
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <p>[toc]</p>
+<p><span style="background:yellow"> 阅读前提示：</span></p>
+<ol>
+<li><strong>请无梯读者和纯中文字符阅读读者关闭本篇教程。</strong></li>
+<li><strong>本教程是个人学习笔记，借鉴了许多其他教程内容，并非手把手，并非复制粘贴。同时也因能力有限，不能保证所有内容正确且适用于所有人。因阅读后，操作出现问题与损失，后果请由读者自身承担。</strong></li>
+<li><strong>教程针对Windows系统，其它系统不做解释</strong></li>
+<li><strong>感谢支持，笔芯♥，么么哒</strong></li>
+</ol>
+<h1 id="1前期准备"><a href="#1前期准备" class="headerlink" title="1前期准备"></a>1前期准备</h1><p>前期准备基本安装软件与注册账户。</p>
+<p><strong>注意：</strong> 标题前有 ‘^’ 为非必要项目。</p>
+<h2 id="1-1Python"><a href="#1-1Python" class="headerlink" title="1.1Python"></a>1.1Python</h2><p><a href="https://www.python.org/" target="_blank" rel="noopener">Python官网</a>下载Python，添加到PATH。</p>
+<h2 id="1-2FFmpeg"><a href="#1-2FFmpeg" class="headerlink" title="1.2FFmpeg"></a>1.2FFmpeg</h2><blockquote>
+<p>FFmpeg is the leading multimedia framework to decode, encode, transcode, mux, demux, stream, filter and play. All builds require at least Windows 7 or Mac OS X 10.10.</p>
+<p>​                                                                                        ——<a href="https://ffmpeg.zeranoe.com/builds/" target="_blank" rel="noopener">FFmpeg 官网</a></p>
+</blockquote>
+<p>官网下载FFmpeg，解压缩，放到C\Program Files\。将解压后的bin文件夹放到PATH。</p>
+<h2 id="1-3Youtube-dl"><a href="#1-3Youtube-dl" class="headerlink" title="1.3Youtube -dl"></a>1.3Youtube -dl</h2><p>打开命令行，输入</p>
+<pre><code class="hljs cmake">pip <span class="hljs-keyword">install</span> youtube-dl   <span class="hljs-comment">#安装</span>
+pip <span class="hljs-keyword">install</span> --upgrade youtube-dl  <span class="hljs-comment">#升级</span></code></pre>
+
+<p>注意pip对应的Python版本，以及顺手将pip的升级：</p>
+<pre><code class="hljs sql">python -m pip <span class="hljs-keyword">install</span> <span class="hljs-comment">--upgrade pip</span></code></pre>
+
+
+
+<h1 id="2下载视频"><a href="#2下载视频" class="headerlink" title="2下载视频"></a>2下载视频</h1><p>无脑下载为在命令行输入：</p>
+<pre><code class="hljs ebnf"><span class="hljs-attribute">youtube-dl URL</span></code></pre>
+
+<p><strong>注意：</strong>将URL替换为下载视频的地址。</p>
+<p>然而正确的姿势（通用格式）为：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">youtube-dl</span> <span class="hljs-selector-attr">[OPTIONS]</span> <span class="hljs-selector-tag">URL</span> <span class="hljs-selector-attr">[URL...]</span></code></pre>
+
+<p>OPTIONS为选项列表，URL为选项列表。</p>
+<pre><code class="hljs dsconfig"><span class="hljs-string">Options:</span>
+  通用选项:
+    -h, <span class="hljs-built_in">--help</span>                       打印帮助文档
+    <span class="hljs-built_in">--version</span>                        打印版本信息
+    -U, <span class="hljs-built_in">--update</span>                     更新到最新版(需要权限)
+    -i, <span class="hljs-built_in">--ignore-errors</span>              遇到下载错误时跳过
+    <span class="hljs-built_in">--abort-on-error</span>                 遇到下载错误时终止
+    <span class="hljs-built_in">--dump-user-agent</span>                显示当前使用的浏览器(<span class="hljs-string">User-agent)</span>
+    <span class="hljs-built_in">--list-extractors</span>                列出所有的提取器(支持的网站)
+    <span class="hljs-built_in">--extractor-descriptions</span>         同上
+    <span class="hljs-built_in">--force-generic-extractor</span>        强制使用通用提取器下载
+    <span class="hljs-built_in">--default-search</span> <span class="hljs-string">PREFIX </span>         使用此前缀补充不完整的<span class="hljs-string">URLs，</span>例如：<span class="hljs-string">"ytsearch2 yt-dl"</span> 从<span class="hljs-string">youtube搜</span>索并下载两个关于<span class="hljs-string">yt-dl视</span>频. 使用<span class="hljs-string">"auto"</span><span class="hljs-string">youtube-dl就</span>会猜一个，一般效果等价于<span class="hljs-string">"ytsearch"</span>(<span class="hljs-string">"auto_warning"</span>猜测时加入警告).我已知支持的<span class="hljs-string">PREFIX：</span><span class="hljs-string">ytsearch </span>(<span class="hljs-string">youtube)</span>, <span class="hljs-string">ytsearchdate </span>(<span class="hljs-string">youtube)</span>, <span class="hljs-string">yvsearch </span>(<span class="hljs-string">yahoo </span><span class="hljs-string">videos)</span>, <span class="hljs-string">gvsearch </span>(<span class="hljs-string">google </span><span class="hljs-string">videos)</span> 
+    <span class="hljs-built_in">--ignore-config</span>                  不读取配置文件，当时用了全局配置文件/<span class="hljs-string">etc/</span><span class="hljs-string">youtube-dl.</span><span class="hljs-string">conf:</span>不再读取 ~/.<span class="hljs-string">config/</span><span class="hljs-string">youtube-dl/</span><span class="hljs-string">config </span>(%<span class="hljs-string">APPDATA%</span>/<span class="hljs-string">youtube-dl/</span><span class="hljs-string">config.</span><span class="hljs-string">txt </span><span class="hljs-string">on </span><span class="hljs-string">Windows)</span>
+    <span class="hljs-built_in">--config-location</span> <span class="hljs-string">PATH </span>          使用指定路径下的配置文件
+    <span class="hljs-built_in">--flat-playlist</span>                  列出列表视频但不下载
+    <span class="hljs-built_in">--mark-watched</span>                   标记看过此视频 (<span class="hljs-string">YouTube </span><span class="hljs-string">only)</span>
+    <span class="hljs-built_in">--no-mark-watched</span>                不标记看过此视频 (<span class="hljs-string">YouTube </span><span class="hljs-string">only)</span>
+    <span class="hljs-built_in">--no-color</span>                       打印到屏幕上的代码不带色
+
+  网络选项:
+    <span class="hljs-built_in">--proxy</span> <span class="hljs-string">URL </span>                     使用<span class="hljs-string">HTTP/</span><span class="hljs-string">HTTPS/</span><span class="hljs-string">SOCKS协</span>议的代理.如：<span class="hljs-string">socks5:</span>//<span class="hljs-string">127.</span>0.0.<span class="hljs-string">1:1080/</span>.
+    <span class="hljs-built_in">--socket-timeout</span> <span class="hljs-string">SECONDS </span>        放弃连接前等待时间
+    <span class="hljs-built_in">--source-address</span> <span class="hljs-string">IP </span>             绑定的客户端<span class="hljs-string">IP地</span>址
+    -4, <span class="hljs-built_in">--force-ipv4</span>                 所有连接通过<span class="hljs-string">IPv4</span>
+<span class="hljs-string"> </span>   -6, <span class="hljs-built_in">--force-ipv6</span>                 所有连接通过<span class="hljs-string">IPv6</span>
+<span class="hljs-string"></span>
+<span class="hljs-string"> </span> 地理限制:
+    <span class="hljs-built_in">--geo-verification-proxy</span> <span class="hljs-string">URL </span>    使用此代理地址测试一些有地理限制的地址
+    <span class="hljs-built_in">--geo-bypass</span>                     绕过地理限制通过伪装<span class="hljs-string">X-Forwarded-</span><span class="hljs-string">For </span><span class="hljs-string">HTTP头</span>部的客户端<span class="hljs-string">ip</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--no-geo-bypass</span>                  不 绕过地理限制通过伪装<span class="hljs-string">X-Forwarded-</span><span class="hljs-string">For </span><span class="hljs-string">HTTP头</span>部的客户端<span class="hljs-string">ip</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--geo-bypass-country</span> <span class="hljs-string">CODE </span>       强制绕过地理限制通过提供准确的<span class="hljs-string">ISO </span><span class="hljs-string">3166-2标</span>准的国别代码    <span class="hljs-built_in">--geo-bypass-ip-block</span> <span class="hljs-string">IP_BLOCK </span>  强制绕过地理限制通过提供精确的无类别域间路由<span class="hljs-string">IP段</span>(<span class="hljs-string">2018.</span><span class="hljs-string">09.</span><span class="hljs-string">13更</span>新)  视频选择:
+    <span class="hljs-built_in">--playlist-start</span> <span class="hljs-string">NUMBER </span>         指定列表中开始下载的视频(默认为1)
+    <span class="hljs-built_in">--playlist-end</span> <span class="hljs-string">NUMBER </span>           指定列表中结束的视频(默认为<span class="hljs-string">last)</span>
+    <span class="hljs-built_in">--playlist-items</span> <span class="hljs-string">ITEM_SPEC </span>      指定列表中要下载的视频项目编号.如：<span class="hljs-string">"--playlist-items 1,2,5,8"</span>或<span class="hljs-string">"--playlist-items 1-3,7,10-13"</span>
+    <span class="hljs-built_in">--match-title</span> <span class="hljs-string">REGEX </span>             下载标题匹配的视频(正则表达式或区分大小写的字符串)
+    <span class="hljs-built_in">--reject-title</span> <span class="hljs-string">REGEX </span>            跳过下载标题匹配的视频(正则表达式或区分大小写的字符串)
+    <span class="hljs-built_in">--max-downloads</span> <span class="hljs-string">NUMBER </span>          下载<span class="hljs-string">NUMBER个</span>视频后停止
+    <span class="hljs-built_in">--min-filesize</span> <span class="hljs-string">SIZE </span>             不下载小于<span class="hljs-string">SIZE的</span>视频(e.g. <span class="hljs-string">50k </span><span class="hljs-string">or </span><span class="hljs-string">44.</span><span class="hljs-string">6m)</span>
+    <span class="hljs-built_in">--max-filesize</span> <span class="hljs-string">SIZE </span>             不下载大于<span class="hljs-string">SIZE的</span>视频(e.g. <span class="hljs-string">50k </span><span class="hljs-string">or </span><span class="hljs-string">44.</span><span class="hljs-string">6m)</span>
+    <span class="hljs-built_in">--date</span> <span class="hljs-string">DATE </span>                     仅下载上传日期在指定日期的视频
+    <span class="hljs-built_in">--datebefore</span> <span class="hljs-string">DATE </span>               仅下载上传日期在指定日期或之前的视频 (i.e. <span class="hljs-string">inclusive)</span>
+    <span class="hljs-built_in">--dateafter</span> <span class="hljs-string">DATE </span>                仅下载上传日期在指定日期或之后的视频 (i.e. <span class="hljs-string">inclusive)</span>
+    <span class="hljs-built_in">--min-views</span> <span class="hljs-string">COUNT </span>               不下载观影数小于指定值的视频
+    <span class="hljs-built_in">--max-views</span> <span class="hljs-string">COUNT </span>               不下载观影数大于指定值的视频
+    <span class="hljs-built_in">--match-filter</span> <span class="hljs-string">FILTER </span>           通用视频过滤器. <span class="hljs-string">Specify </span><span class="hljs-string">any </span><span class="hljs-string">key </span>(<span class="hljs-string">see </span><span class="hljs-string">help </span><span class="hljs-string">for </span>-o <span class="hljs-string">for </span>a <span class="hljs-string">list </span><span class="hljs-string">of </span><span class="hljs-string">available </span><span class="hljs-string">keys)</span> <span class="hljs-string">to </span><span class="hljs-string">match </span><span class="hljs-string">if </span><span class="hljs-string">the </span><span class="hljs-string">key </span><span class="hljs-string">is </span><span class="hljs-string">present,</span> !<span class="hljs-string">key </span><span class="hljs-string">to </span><span class="hljs-string">check </span><span class="hljs-string">if </span><span class="hljs-string">the </span><span class="hljs-string">key </span><span class="hljs-string">is </span><span class="hljs-string">not </span><span class="hljs-string">present,</span> <span class="hljs-string">key </span>&gt; <span class="hljs-string">NUMBER </span>(<span class="hljs-string">like </span><span class="hljs-string">"comment_count &gt; 12"</span>, <span class="hljs-string">also </span><span class="hljs-string">works </span><span class="hljs-string">with </span>&gt;=, &lt;, &lt;=, !=, =) <span class="hljs-string">to </span><span class="hljs-string">compare </span><span class="hljs-string">against </span>a <span class="hljs-string">number,</span><span class="hljs-string">key </span>= <span class="hljs-string">'LITERAL'</span> (<span class="hljs-string">like </span><span class="hljs-string">"uploader = 'Mike Smith'"</span>, <span class="hljs-string">also </span><span class="hljs-string">works </span><span class="hljs-string">with </span>!=) <span class="hljs-string">to </span><span class="hljs-string">match </span><span class="hljs-string">against </span>a <span class="hljs-string">string </span><span class="hljs-string">literal </span><span class="hljs-string">and </span>&amp; <span class="hljs-string">to </span><span class="hljs-string">require </span><span class="hljs-string">multiple </span><span class="hljs-string">matches.</span> <span class="hljs-string">Values </span><span class="hljs-string">which </span><span class="hljs-string">are </span><span class="hljs-string">not </span><span class="hljs-string">known </span><span class="hljs-string">are </span><span class="hljs-string">excluded </span><span class="hljs-string">unless </span><span class="hljs-string">you </span><span class="hljs-string">put </span>a <span class="hljs-string">question </span><span class="hljs-string">mark </span>(?) <span class="hljs-string">after </span><span class="hljs-string">the </span><span class="hljs-string">operator.</span> <span class="hljs-string">For </span><span class="hljs-string">example,</span> <span class="hljs-string">to </span><span class="hljs-string">only </span><span class="hljs-string">match </span><span class="hljs-string">videos </span><span class="hljs-string">that </span><span class="hljs-string">have </span><span class="hljs-string">been </span><span class="hljs-string">liked </span><span class="hljs-string">more </span><span class="hljs-string">than </span><span class="hljs-string">100 </span><span class="hljs-string">times </span><span class="hljs-string">and </span><span class="hljs-string">disliked </span><span class="hljs-string">less </span><span class="hljs-string">than </span><span class="hljs-string">50 </span><span class="hljs-string">times </span>(<span class="hljs-string">or </span><span class="hljs-string">the </span><span class="hljs-string">dislike </span><span class="hljs-string">functionality </span><span class="hljs-string">is </span><span class="hljs-string">not </span><span class="hljs-string">available </span><span class="hljs-string">at </span><span class="hljs-string">the </span><span class="hljs-string">given </span><span class="hljs-string">service)</span>, <span class="hljs-string">but </span><span class="hljs-string">who </span><span class="hljs-string">also </span><span class="hljs-string">have </span>a <span class="hljs-string">description,</span> <span class="hljs-string">use </span><span class="hljs-built_in">--match-filter</span> <span class="hljs-string">"like_count &gt; 100 &amp; dislike_count &lt;? 50 &amp; description"</span> .    <span class="hljs-built_in">--no-playlist</span>                    当视频链接到一个视频和一个播放列表时，仅下载视频
+    <span class="hljs-built_in">--yes-playlist</span>                   当视频链接到一个视频和一个播放列表时，下载视频和播放列表
+    <span class="hljs-built_in">--age-limit</span> <span class="hljs-string">YEARS </span>               下载合适上传年限的视频
+    <span class="hljs-built_in">--download-archive</span> <span class="hljs-string">FILE </span>         仅下载档案文件中未列出的影片，已下载的记录<span class="hljs-string">ID</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--include-ads</span>                    同时下载广告(实验)
+
+  下载选项:
+    -r, <span class="hljs-built_in">--limit-rate</span> <span class="hljs-string">RATE </span>           最大<span class="hljs-string">bps </span>(e.g. <span class="hljs-string">50K </span><span class="hljs-string">or </span>4.<span class="hljs-string">2M)</span>
+    -R, <span class="hljs-built_in">--retries</span> <span class="hljs-string">RETRIES </span>           重试次数 (默认<span class="hljs-string">10)</span>, <span class="hljs-string">or </span><span class="hljs-string">"infinite"</span>.
+    <span class="hljs-built_in">--fragment-retries</span> <span class="hljs-string">RETRIES </span>      一个分段的最大重试次数(<span class="hljs-string">default </span><span class="hljs-string">is </span><span class="hljs-string">10)</span>, <span class="hljs-string">or </span><span class="hljs-string">"infinite"</span> (<span class="hljs-string">DASH,</span> <span class="hljs-string">hlsnative </span><span class="hljs-string">and </span><span class="hljs-string">ISM)</span>
+    <span class="hljs-built_in">--skip-unavailable-fragments</span>     跳过不可用分段(<span class="hljs-string">DASH,</span> <span class="hljs-string">hlsnative </span><span class="hljs-string">and </span><span class="hljs-string">ISM)</span>
+    <span class="hljs-built_in">--abort-on-unavailable-fragment</span>  放弃某个分段当不可获取时
+    <span class="hljs-built_in">--keep-fragments</span>                 下载完成后，将下载的片段保存在磁盘上; 片段默认被删除
+    <span class="hljs-built_in">--buffer-size</span> <span class="hljs-string">SIZE </span>              设置缓冲区大小<span class="hljs-string">buffer </span>(e.g. <span class="hljs-string">1024 </span><span class="hljs-string">or </span><span class="hljs-string">16K)</span> (<span class="hljs-string">default </span><span class="hljs-string">is </span><span class="hljs-string">1024)</span>
+    <span class="hljs-built_in">--no-resize-buffer</span>               不自动调整缓冲区大小.默认情况下自动调整
+    <span class="hljs-built_in">--playlist-reverse</span>               以相反的顺序下载播放列表视频
+    <span class="hljs-built_in">--playlist-random</span>                以随机的顺序下载播放列表视频
+    <span class="hljs-built_in">--xattr-set-filesize</span>             <span class="hljs-string">Set </span><span class="hljs-string">file </span><span class="hljs-string">xattribute </span><span class="hljs-string">ytdl.</span><span class="hljs-string">filesize </span><span class="hljs-string">with </span><span class="hljs-string">expected </span><span class="hljs-string">file </span><span class="hljs-string">size </span>(<span class="hljs-string">experimental)</span>
+    <span class="hljs-built_in">--hls-prefer-native</span>              使用本机默认<span class="hljs-string">HLS下</span>载器而不是<span class="hljs-string">ffmpeg</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--hls-prefer-ffmpeg</span>              使用<span class="hljs-string">ffmpeg而</span>不是本机<span class="hljs-string">HLS下</span>载器
+    <span class="hljs-built_in">--hls-use-mpegts</span>                 使用<span class="hljs-string">TS流</span>容器来存放<span class="hljs-string">HLS视</span>频,一些高级播放器允许在下载的同时播放视频
+    <span class="hljs-built_in">--external-downloader</span> <span class="hljs-string">COMMAND </span>   使用指定的第三方下载工具,当前支持：<span class="hljs-string">aria2c,</span><span class="hljs-string">avconv,</span><span class="hljs-string">axel,</span><span class="hljs-string">curl,</span><span class="hljs-string">ffmpeg,</span><span class="hljs-string">httpie,</span><span class="hljs-string">wget</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--external-downloader-args</span> <span class="hljs-string">ARGS </span> 给第三方下载工具指定参数，如：<span class="hljs-built_in">--external-downloader</span> <span class="hljs-string">aria2c </span><span class="hljs-built_in">--external-downloader-args</span> -<span class="hljs-string">j8</span>
+<span class="hljs-string"></span>
+<span class="hljs-string"> </span> 文件系统选项:
+    -a, <span class="hljs-built_in">--batch-file</span> <span class="hljs-string">FILE </span>           文件中包含需要下载的<span class="hljs-string">URL</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--id</span>                             仅使用文件名中的视频<span class="hljs-string">ID</span>
+<span class="hljs-string"> </span>   -o, <span class="hljs-built_in">--output</span> <span class="hljs-string">TEMPLATE </span>           <span class="hljs-string">Output </span><span class="hljs-string">filename </span><span class="hljs-string">template,</span> <span class="hljs-string">see </span><span class="hljs-string">the </span><span class="hljs-string">"OUTPUT TEMPLATE"</span> <span class="hljs-string">for </span><span class="hljs-string">all </span><span class="hljs-string">the </span><span class="hljs-string">info</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--autonumber-start</span> <span class="hljs-string">NUMBER </span>       指定%(<span class="hljs-string">autonumber)</span>s的起始值(默认为1)
+    <span class="hljs-built_in">--restrict-filenames</span>             将文件名限制为<span class="hljs-string">ASCII字</span>符，并避免文件名中的“＆”和空格
+    -w, <span class="hljs-built_in">--no-overwrites</span>              不要覆盖文件
+    -c, <span class="hljs-built_in">--continue</span>                   强制恢复部分下载的文件。 默认情况下，<span class="hljs-string">youtube-dl仅</span>在可能时将恢复下载。
+    <span class="hljs-built_in">--no-continue</span>                    不要恢复部分下载的文件(从头开始重新启动)
+    <span class="hljs-built_in">--no-part</span>                        不使用.<span class="hljs-string">part文</span>件 - 直接写入输出文件
+    <span class="hljs-built_in">--no-mtime</span>                       不使用<span class="hljs-string">Last-modified </span><span class="hljs-string">header来</span>设置文件最后修改时间
+    <span class="hljs-built_in">--write-description</span>              将视频描述写入.<span class="hljs-string">description文</span>件
+    <span class="hljs-built_in">--write-info-json</span>                将视频元数据写入.<span class="hljs-string">info.</span><span class="hljs-string">json文</span>件
+    <span class="hljs-built_in">--write-annotations</span>              将视频注释写入.<span class="hljs-string">annotations.</span><span class="hljs-string">xml文</span>件
+    <span class="hljs-built_in">--load-info-json</span> <span class="hljs-string">FILE </span>           包含视频信息的<span class="hljs-string">JSON文</span>件(使用“<span class="hljs-built_in">--write-info-json”选项创建)</span>
+<span class="hljs-built_in"></span>    <span class="hljs-built_in">--cookies</span> <span class="hljs-string">FILE </span>                  文件从中读取<span class="hljs-string">Cookie(</span>经测试，<span class="hljs-string">export </span><span class="hljs-string">cookies插</span>件可以使用，但<span class="hljs-string">firebug导</span>出的<span class="hljs-string">cookies导</span>致错误,<span class="hljs-string">chrome下</span>请用<span class="hljs-string">cookies.</span><span class="hljs-string">txt)</span>注意：不同平台<span class="hljs-string">windows、</span><span class="hljs-string">Linux、</span><span class="hljs-string">OSX之</span>间需要转换<span class="hljs-string">CE </span><span class="hljs-string">LF才</span>能使用！
+    <span class="hljs-built_in">--cache-dir</span> <span class="hljs-string">DIR </span>                 文件存储位置。<span class="hljs-string">youtube-dl需</span>要永久保存一些下载的信息。默认为$<span class="hljs-string">XDG_CACHE_HOME/</span><span class="hljs-string">youtube-dl或</span>/.<span class="hljs-string">cache/</span><span class="hljs-string">youtube-dl。</span>目前，只有<span class="hljs-string">YouTube播</span>放器文件（对于具有模糊签名的视频）进行缓存，但可能会发生变化。
+    <span class="hljs-built_in">--no-cache-dir</span>                   不用缓存
+    <span class="hljs-built_in">--rm-cache-dir</span>                   删除所有缓存文件
+
+  缩略图:
+    <span class="hljs-built_in">--write-thumbnail</span>                把缩略图写入硬盘
+    <span class="hljs-built_in">--write-all-thumbnails</span>           将所有缩略图写入磁盘
+    <span class="hljs-built_in">--list-thumbnails</span>                列出所有可用的缩略图格式
+
+  详细/模拟选项:
+    -q, <span class="hljs-built_in">--quiet</span>                      激活退出模式
+    <span class="hljs-built_in">--no-warnings</span>                    忽略警告
+    -s, <span class="hljs-built_in">--simulate</span>                   不下载不存储任何文件到硬盘，模拟下载模式
+    <span class="hljs-built_in">--skip-download</span>                  不下载视频
+    -g, <span class="hljs-built_in">--get-url</span>                    模拟下载获取视频直连
+    -e, <span class="hljs-built_in">--get-title</span>                  模拟下载获取标题
+    <span class="hljs-built_in">--get-id</span>                         模拟下载获取<span class="hljs-string">id</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--get-thumbnail</span>                  模拟下载获取缩略图<span class="hljs-string">URL</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--get-description</span>                模拟下载获取视频描述
+    <span class="hljs-built_in">--get-duration</span>                   模拟下载获取视频长度
+    <span class="hljs-built_in">--get-filename</span>                   模拟下载获取输出视频文件名
+    <span class="hljs-built_in">--get-format</span>                     模拟下载获取输出视频格式
+    -j, <span class="hljs-built_in">--dump-json</span>                  模拟下载获取<span class="hljs-string">JSON </span><span class="hljs-string">information.</span>
+    -J, <span class="hljs-built_in">--dump-single-json</span>           模拟下载获取每条命令行参数的<span class="hljs-string">JSON </span><span class="hljs-string">information.</span>如果是个播放列表，就获取整个播放列表的<span class="hljs-string">JSON</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--print-json</span>                     下载的同时获取视频信息的<span class="hljs-string">JSON</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--newline</span>                        进度条在新行输出
+    <span class="hljs-built_in">--no-progress</span>                    不打印进度条
+    <span class="hljs-built_in">--console-title</span>                  在控制台标题栏显示进度
+    -v, <span class="hljs-built_in">--verbose</span>                    打印各种调试信息
+    <span class="hljs-built_in">--dump-pages</span>                     打印下载下来的使用<span class="hljs-string">base64编</span>码的页面来调试问题（非常冗长）
+    <span class="hljs-built_in">--write-pages</span>                    将下载的中间页以文件的形式写入当前目录中以调试问题
+    <span class="hljs-built_in">--print-traffic</span>                  显示发送和读取<span class="hljs-string">HTTP流</span>量
+    -C, <span class="hljs-built_in">--call-home</span>                  联系<span class="hljs-string">youtube-dl服</span>务器进行调试
+    <span class="hljs-built_in">--no-call-home</span>                   不联系<span class="hljs-string">youtube-dl服</span>务器进行调试
+
+  解决方法:
+    <span class="hljs-built_in">--encoding</span> <span class="hljs-string">ENCODING </span>             强制指定编码(实验)
+    <span class="hljs-built_in">--no-check-certificate</span>           禁止<span class="hljs-string">HTTPS证</span>书验证
+    <span class="hljs-built_in">--prefer-insecure</span>                使用未加密的连接来检索有关视频的信息(目前仅支持<span class="hljs-string">YouTube)</span>
+    <span class="hljs-built_in">--user-agent</span> <span class="hljs-string">UA </span>                 指定<span class="hljs-string">user </span><span class="hljs-string">agent</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--referer</span> <span class="hljs-string">URL </span>                   指定自定义的<span class="hljs-string">referer,</span>仅限视频来源于同一网站
+    <span class="hljs-built_in">--add-header</span> <span class="hljs-string">FIELD:VALUE </span>        指定一个自定义值的<span class="hljs-string">HTTP头</span>文件,使用分号分割,可以多次使用此选项
+    <span class="hljs-built_in">--bidi-workaround</span>                围绕缺少双向文本支持的终端工作。需要在<span class="hljs-string">PATH中</span>有<span class="hljs-string">bidiv或</span><span class="hljs-string">fribidi可</span>执行文件
+    <span class="hljs-built_in">--sleep-interval</span> <span class="hljs-string">SECONDS </span>        在每次下载之前休眠的秒数，或者每次下载之前的随机睡眠的范围的下限(最小可能的睡眠秒数)与-<span class="hljs-string">max-sleep-</span><span class="hljs-string">interval一</span>起使用。
+    <span class="hljs-built_in">--max-sleep-interval</span> <span class="hljs-string">SECONDS </span>    每次下载前随机睡眠范围的上限(最大可能睡眠秒数)。只能与<span class="hljs-built_in">--min-sleep-interval一起使用。</span>
+<span class="hljs-built_in"></span>
+<span class="hljs-built_in"></span>  视频格式选项:
+    -f, <span class="hljs-built_in">--format</span> <span class="hljs-string">FORMAT </span>             视频格式代码,查看<span class="hljs-string">"FORMAT SELECTION"</span>获取所有信息
+    <span class="hljs-built_in">--all-formats</span>                    获取所有视频格式
+    <span class="hljs-built_in">--prefer-free-formats</span>            开源的视频格式优先，除非有特定的请求
+    -F, <span class="hljs-built_in">--list-formats</span>               列出请求视频的所有可用格式
+    <span class="hljs-built_in">--youtube-skip-dash-manifest</span>     不要下载关于<span class="hljs-string">YouTube视</span>频的<span class="hljs-string">DASH清</span>单和相关数据
+    <span class="hljs-built_in">--merge-output-format</span> <span class="hljs-string">FORMAT </span>    如果需要合并(例如<span class="hljs-string">bestvideo </span>+ <span class="hljs-string">bestaudio)</span>，则输出到给定的容器格式。<span class="hljs-string">mkv，</span><span class="hljs-string">mp4，</span><span class="hljs-string">ogg，</span><span class="hljs-string">webm，</span><span class="hljs-string">flv之</span>一。如果不需要合并，则忽略
+
+  字幕选项:
+    <span class="hljs-built_in">--write-sub</span>                      下载字幕文件
+    <span class="hljs-built_in">--write-auto-sub</span>                 下载自动生成的字幕文件 (<span class="hljs-string">YouTube </span><span class="hljs-string">only)</span>
+    <span class="hljs-built_in">--all-subs</span>                       下载所有可用的字幕
+    <span class="hljs-built_in">--list-subs</span>                      列出所有字幕
+    <span class="hljs-built_in">--sub-format</span> <span class="hljs-string">FORMAT </span>             字幕格式,接受格式偏好,如：<span class="hljs-string">"srt"</span> <span class="hljs-string">or </span><span class="hljs-string">"ass/srt/best"</span>
+    <span class="hljs-built_in">--sub-lang</span> <span class="hljs-string">LANGS </span>                要下载的字幕的语言(可选)用逗号分隔,请使用<span class="hljs-built_in">--list-subs表示可用的语言标签</span>
+<span class="hljs-built_in"></span>
+<span class="hljs-built_in"></span>  验证选项:
+    -u, <span class="hljs-built_in">--username</span> <span class="hljs-string">USERNAME </span>         使用<span class="hljs-string">ID登</span>录
+    -p, <span class="hljs-built_in">--password</span> <span class="hljs-string">PASSWORD </span>         账户密码,如果此选项未使用,<span class="hljs-string">youtube-dl将</span>交互式地询问。
+    -2, <span class="hljs-built_in">--twofactor</span> <span class="hljs-string">TWOFACTOR </span>       双因素认证码
+    -n, <span class="hljs-built_in">--netrc</span>                      使用.<span class="hljs-string">netrc认</span>证数据
+    <span class="hljs-built_in">--video-password</span> <span class="hljs-string">PASSWORD </span>       视频密码(<span class="hljs-string">vimeo,</span> <span class="hljs-string">smotri,</span> <span class="hljs-string">youku)</span>
+
+  <span class="hljs-string">Adobe </span><span class="hljs-string">Pass </span><span class="hljs-string">Options:</span>
+    <span class="hljs-built_in">--ap-mso</span> <span class="hljs-string">MSO </span>                    <span class="hljs-string">Adobe </span><span class="hljs-string">Pass多</span>系统运营商(电视提供商)标识符,使用<span class="hljs-built_in">--ap-list-mso列出可用的MSO</span>
+<span class="hljs-built_in"></span>    <span class="hljs-built_in">--ap-username</span> <span class="hljs-string">USERNAME </span>          <span class="hljs-string">MSO账</span>号登录
+    <span class="hljs-built_in">--ap-password</span> <span class="hljs-string">PASSWORD </span>          账户密码,如果此选项未使用,<span class="hljs-string">youtube-dl将</span>交互式地询问。
+    <span class="hljs-built_in">--ap-list-mso</span>                    列出所有支持的<span class="hljs-string">MSO</span>
+<span class="hljs-string"></span>
+<span class="hljs-string"> </span> 后处理选项:
+    -x, <span class="hljs-built_in">--extract-audio</span>              将视频文件转换为纯音频文件(需要<span class="hljs-string">ffmpeg或</span><span class="hljs-string">avconv和</span><span class="hljs-string">ffprobe或</span><span class="hljs-string">avprobe)</span>
+    <span class="hljs-built_in">--audio-format</span> <span class="hljs-string">FORMAT </span>           指定音频格式: <span class="hljs-string">"best"</span>, <span class="hljs-string">"aac"</span>, <span class="hljs-string">"flac"</span>, <span class="hljs-string">"mp3"</span>, <span class="hljs-string">"m4a"</span>, <span class="hljs-string">"opus"</span>, <span class="hljs-string">"vorbis"</span>, <span class="hljs-string">or </span><span class="hljs-string">"wav"</span>; <span class="hljs-string">"best"</span> <span class="hljs-string">by </span><span class="hljs-string">default;</span>-x存在时无效
+    <span class="hljs-built_in">--audio-quality</span> <span class="hljs-string">QUALITY </span>         指定<span class="hljs-string">ffmpeg/</span><span class="hljs-string">avconv音</span>频质量,为<span class="hljs-string">VBR插</span>入一个0(<span class="hljs-string">best)</span>-9(<span class="hljs-string">worse)</span>的值(默认5),或者指定比特率
+    <span class="hljs-built_in">--recode-video</span> <span class="hljs-string">FORMAT </span>           必要时将视频转码为其他格式(当前支持: <span class="hljs-string">mp4|</span><span class="hljs-string">flv|</span><span class="hljs-string">ogg|</span><span class="hljs-string">webm|</span><span class="hljs-string">mkv|</span><span class="hljs-string">avi)</span>
+    <span class="hljs-built_in">--postprocessor-args</span> <span class="hljs-string">ARGS </span>       给后处理器提供这些参数
+    -k, <span class="hljs-built_in">--keep-video</span>                 视频文件在后处理后保存在磁盘上; 该视频默认被删除
+    <span class="hljs-built_in">--no-post-overwrites</span>             不要覆盖后处理文件; 默认情况下,后处理文件将被覆盖
+    <span class="hljs-built_in">--embed-subs</span>                     在视频中嵌入字幕(仅适用于<span class="hljs-string">mp4,</span><span class="hljs-string">webm和</span><span class="hljs-string">mkv视</span>频）
+    <span class="hljs-built_in">--embed-thumbnail</span>                将缩略图嵌入音频作为封面艺术
+    <span class="hljs-built_in">--add-metadata</span>                   将元数据写入视频文件
+    <span class="hljs-built_in">--metadata-from-title</span> <span class="hljs-string">FORMAT </span>    从视频标题中解析附加元数据，如歌曲标题/艺术家。格式语法和<span class="hljs-built_in">--output相似.也可以使用带有命名捕获组的正则表达式。解析的参数替换现有值。Example:</span> <span class="hljs-built_in">--metadata-from-title</span> <span class="hljs-string">"%(artist)s - %(title)s"</span> <span class="hljs-string">matches </span>a <span class="hljs-string">title </span><span class="hljs-string">like </span><span class="hljs-string">"Coldplay - Paradise"</span>. <span class="hljs-string">Example </span>(<span class="hljs-string">regex)</span>: <span class="hljs-built_in">--metadata-from-title</span> <span class="hljs-string">"(?P&lt;artist&gt;.+?) - (?P&lt;title&gt;.+)"</span>     <span class="hljs-built_in">--xattrs</span>                         将元数据写入视频文件的<span class="hljs-string">xattrs(</span>使用<span class="hljs-string">dublin </span><span class="hljs-string">core </span>和 <span class="hljs-string">xdg标</span>准)
+    <span class="hljs-built_in">--fixup</span> <span class="hljs-string">POLICY </span>                  自动更正文件的已知故障。<span class="hljs-string">never(</span>不做警告), <span class="hljs-string">warn(</span>只发出警告), <span class="hljs-string">detect_or_warn </span>(默认;如果可以的话修复文件,否则警告)
+    <span class="hljs-built_in">--prefer-avconv</span>                  后处理时相较<span class="hljs-string">ffmpeg偏</span>向于<span class="hljs-string">avconv</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--prefer-ffmpeg</span>                  后处理优先使用<span class="hljs-string">ffmpeg</span>
+<span class="hljs-string"> </span>   <span class="hljs-built_in">--ffmpeg-location</span> <span class="hljs-string">PATH </span>          <span class="hljs-string">ffmpeg/</span><span class="hljs-string">avconv程</span>序位置;<span class="hljs-string">PATH为</span>二进制所在文件夹或者目录.
+    <span class="hljs-built_in">--exec</span> <span class="hljs-string">CMD </span>                      在下载后对文件执行命令,类似于<span class="hljs-string">find </span>-<span class="hljs-string">exec语</span>法.示例：<span class="hljs-built_in">--exec'adb</span> <span class="hljs-string">push </span>&#123;&#125; /<span class="hljs-string">sdcard/</span><span class="hljs-string">Music/</span> &amp;&amp; <span class="hljs-string">rm </span>&#123;&#125;<span class="hljs-string">'</span>
+<span class="hljs-string">    --convert-subs FORMAT            转换字幕格式(当前支持: srt|ass|vtt)</span></code></pre>
+
+<p>附上youtube -dl的<a href="https://github.com/ytdl-org/youtube-dl" target="_blank" rel="noopener">GitHub原址</a></p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Beginning/">Beginning</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Youtube/">Youtube</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Download/">Download</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/06/23/%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91%E5%9C%A8Potplaer%E5%AE%9E%E6%97%B6%E7%BF%BB%E5%AD%97%E5%B9%95/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">使用百度翻译在Potplaer实时翻译字幕</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/21/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Hexo%E6%A1%86%E6%9E%B6%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%9B%B8%E5%85%B3%E6%AD%A5%E9%AA%A4%E5%92%8C%E4%BA%8B%E9%A1%B9%EF%BC%88%E4%B8%80%EF%BC%89/">
+                        <span class="hidden-mobile">开始使用Hexo框架写博客的相关步骤和事项（一）</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+    <!-- APlayer 音乐播放器 -->
+    <div id="aplayer"></div>
+    <script defer src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+<script type="text/javascript">
+  var oldLoadAp = window.onload;
+  window.onload = function () {
+    oldLoadAp && oldLoadAp();
+
+    new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      autoplay: 'false' === 'true',
+      loop: 'all',
+      order: 'random',
+      theme: '#b7daff',
+      preload: 'none',
+      audio: [{"name":"Say So","artist":"Rainych","url":"/songs/Rainych - Say So.mp3","cover":"/img/cover.jpg"},{"name":"Summer Night","artist":"王一浩","url":"/songs/Summer Night - 王一浩.mp3","cover":"/img/cover.jpg"},{"name":"灌醉鸡儿","artist":"OELoop","url":"/songs/OELoop - 灌醉鸡儿.mp3","cover":"/img/cover.jpg"},{"name":"表态","artist":"梁博","url":"/songs/表态 - 梁博.mp3","cover":"/img/cover.jpg"},{"name":"Yummy","artist":"Justin Bieber&Summer Walker","url":"/songs/Yummy - Justin Bieber&Summer Walker.mp3","cover":"/img/cover.jpg"},{"name":"Side Effects","artist":"The Chainsmokers&Emily Warren","url":"/songs/Side Effects - The Chainsmokers&Emily Warren.mp3","cover":"/img/cover.jpg"}]
+    });
+  }
+</script>
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 6,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "使用youtube-dl下载视频&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 80,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
