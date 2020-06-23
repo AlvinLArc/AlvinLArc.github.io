@@ -210,7 +210,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.5k 字
+      3.6k 字
     </span>
   
 
@@ -220,7 +220,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      44
+      45
        分钟
     </span>
   
@@ -276,8 +276,16 @@ pip <span class="hljs-keyword">install</span> --upgrade youtube-dl  <span class=
 
 
 
-<h1 id="2下载视频"><a href="#2下载视频" class="headerlink" title="2下载视频"></a>2下载视频</h1><p>无脑下载为在命令行输入：</p>
+<h1 id="2下载视频"><a href="#2下载视频" class="headerlink" title="2下载视频"></a>2下载视频</h1><p>下载视频和字幕，在命令行输入：</p>
+<pre><code class="hljs arduino">youtube-dl --<span class="hljs-built_in">write</span>-<span class="hljs-keyword">auto</span>-sub URL</code></pre>
+
+<p>只下载视频，在命令行输入：</p>
 <pre><code class="hljs ebnf"><span class="hljs-attribute">youtube-dl URL</span></code></pre>
+<p>只下载字幕，在命令行输入：</p>
+<pre><code class="hljs brainfuck"><span class="hljs-comment">youtube</span><span class="hljs-literal">-</span><span class="hljs-comment">dl</span> --<span class="hljs-comment">skip</span><span class="hljs-literal">-</span><span class="hljs-comment">download</span> --<span class="hljs-comment">all</span><span class="hljs-literal">-</span><span class="hljs-comment">subs</span> <span class="hljs-comment">URL</span></code></pre>
+
+<p>只下载自动字幕，在命令行输入：</p>
+<pre><code class="hljs vbnet">youtube-dl --<span class="hljs-keyword">skip</span>-download --write-<span class="hljs-keyword">auto</span>-<span class="hljs-keyword">sub</span> URL</code></pre>
 
 <p><strong>注意：</strong>将URL替换为下载视频的地址。</p>
 <p>然而正确的姿势（通用格式）为：</p>

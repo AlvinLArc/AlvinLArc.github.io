@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/default.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="grasshopper学习中，blender学习中，python不会中，substance designer不会中">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>学习Substance Designer blend节点前，了解Photoshop混合模式 - 建筑淆淆士小梁的淆习笔记</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liang</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                Portfolio
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://alvinlarc.github.io/archives/" target="_blank" rel="noopener">
+                    
+                    Grasshopper
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://alvinlarc.github.io/archives/" target="_blank" rel="noopener">
+                    
+                    Blender
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://alvinlarc.github.io/archives/" target="_blank" rel="noopener">
+                    
+                    Python
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://alvinlarc.github.io/archives/" target="_blank" rel="noopener">
+                    
+                    Substance Designer
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-23 12:49">
+      June 23, 2020 pm
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      120
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <p>[toc]</p>
+<p><span style="background:yellow"> 阅读前提示：</span></p>
+<ol>
+<li><strong>请无梯读者和纯中文字符阅读读者关闭本篇教程。</strong></li>
+<li><strong>本教程是个人学习笔记，借鉴了许多其他教程内容。用于快速不熟练时的快速查询。同时也因能力有限，不能保证所有内容正确且适用于所有人。因阅读后，操作出现问题与损失，后果请由读者自身承担。</strong></li>
+<li><strong>在Substance Design，Blender中制作材质，都会涉及到图与图的混合以及函数计算。本篇从平面软件Photoshop的混合模式入手，也许有助于了解三维。（毕竟我学了大学5年设计，就没怎么用过Photoshop。可以说是纯小白，学习混合模式，跟我一起吧！Come on！）</strong></li>
+<li><strong>感谢支持，笔芯♥，么么哒</strong></li>
+</ol>
+<h1 id="Photoshop-Blend-Modes-Explained"><a href="#Photoshop-Blend-Modes-Explained" class="headerlink" title="Photoshop Blend Modes Explained"></a>Photoshop Blend Modes Explained</h1><p>By <a href="https://photoblogstop.com/author/robertthomas" target="_blank" rel="noopener">Robert Thomas</a></p>
+<p>Working with blend modes is almost always an experimental process. Because it’s nearly impossible to predict the results, you always seem to end up experimenting with different modes and Fill Opacities until you get the results you’re looking for.</p>
+<p>In this article I’m going to give you a high-level view of what the various blend modes do, and then I’ll dig deeper into the nuts and bolts of the blend modes by explaining some of the math involved, and their interrelationships with each other. I’m not going to “show” you how the blend modes work—I’m going to “explain” how they work. By the time you finish reading this article, you should have a better idea of how to use blend modes and where to begin your “experimentation,” which in turn should reduce the time it takes to achieve the results you’re looking for.</p>
+<h2 id="Blend-Mode-Groups"><a href="#Blend-Mode-Groups" class="headerlink" title="Blend Mode Groups"></a>Blend Mode Groups</h2><p>While the blend mode names don’t make all that much sense, Adobe did group the blend modes into logical groups.</p>
+<p><a href="https://cdn2.photoblogstop.com/wp-content/uploads/2011/04/Blend_Modes_Groups-web1.jpg" target="_blank" rel="noopener"><img src="https://cdn2.photoblogstop.com/wp-content/uploads/2011/04/Blend_Modes_Groups-web1.jpg" srcset="/img/loading.gif" alt="Blend Modes Groups"></a></p>
+<h2 id="Blend-Mode-Math"><a href="#Blend-Mode-Math" class="headerlink" title="Blend Mode Math"></a>Blend Mode Math</h2><p>Before I list the 27 blend modes and how they work, you need to understand how the math in Photoshop works. Because the blend modes work with brightness and darkness values, i.e., luminance levels, and because luminance levels appear as values from 0 to 255 in Photoshop (as seen with the Levels dialog box), you would assume that the math Photoshop performs is based on these values. However, in the background, Photoshop “standardizes” these luminance values before applying the math. When these values are standardized, white (255) becomes 1, black (0) remains at 0, and 50% gray becomes 0.5. All of the blend mode math takes place in the small range between 0 and 1. It’s important that you understand this concept of standardization, so you can understand the following mathematical equations.</p>
+<p><a href="https://cdn3.photoblogstop.com/wp-content/uploads/2011/04/Blend_Modes_Standardized_Numbers-web1.jpg" target="_blank" rel="noopener"><img src="https://cdn3.photoblogstop.com/wp-content/uploads/2011/04/Blend_Modes_Standardized_Numbers-web1.jpg" srcset="/img/loading.gif" alt="Standardized Numbers Illustrated"></a></p>
+<p>Because the luminance values are standardized before the math is applied, and the math is working with numbers ranging between 0 and 1, the resulting calculations may not be what you would expect. For example, when working with numbers greater than 1, division results in a smaller number, and multiplication results in a larger number. However, when working with numbers between 0 and 1, division results in a larger number, and multiplication results in a smaller number. Subtraction and addition work pretty much as you would expect, whether you’re working with numbers greater than 1, or values between 0 and 1.</p>
+<p>Below are some examples using arbitrary numbers that show how the math results differ when working with numbers between 0 and 1 versus numbers between 0 and 255. To help you better understand the numeric values illustrated below, the regular luminance number 200 is converted to a standardized number by using: 200 ÷ 255 = 0.78, and the regular number 72 is converted to a standardized number by using: 72 ÷ 255 = 0.28.</p>
+<h2 id="Blend-Mode-Math-Examples"><a href="#Blend-Mode-Math-Examples" class="headerlink" title="Blend Mode Math Examples"></a>Blend Mode Math Examples</h2><ol>
+<li>A = Active Layer</li>
+<li>B = Background Layer (i.e., the underlying layers)</li>
+<li>*In the equations below, 1−X = the luminance level “X” is Inverted</li>
+</ol>
+<h3 id="Darken-Modes-Math"><a href="#Darken-Modes-Math" class="headerlink" title="Darken Modes Math"></a>Darken Modes Math</h3><table>
+<thead>
+<tr>
+<th>Blend Mode</th>
+<th>Equation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Multiply</td>
+<td>A×B</td>
+<td>A multiplied by B</td>
+</tr>
+<tr>
+<td>Color Burn</td>
+<td>1−(1−B)÷A</td>
+<td>B inverted divided by A, and the quotient is then inverted</td>
+</tr>
+<tr>
+<td>Linear Burn</td>
+<td>A+B−1</td>
+<td>A plus B, then white is subtracted from the sum (an inversion)</td>
+</tr>
+</tbody></table>
+<h3 id="Lighten-Modes-Math"><a href="#Lighten-Modes-Math" class="headerlink" title="Lighten Modes Math"></a>Lighten Modes Math</h3><table>
+<thead>
+<tr>
+<th>Blend Mode</th>
+<th>Equation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Screen</td>
+<td>1−(1−A)×(1−B)</td>
+<td>A inverted multiplied by B inverted, and the product is inverted</td>
+</tr>
+<tr>
+<td>Color Dodge</td>
+<td>B÷(1−A)</td>
+<td>B divided by A inverted</td>
+</tr>
+<tr>
+<td>Linear Dodge</td>
+<td>A+B</td>
+<td>A plus B</td>
+</tr>
+</tbody></table>
+<h3 id="Cancellation-Modes-Math"><a href="#Cancellation-Modes-Math" class="headerlink" title="Cancellation Modes Math"></a>Cancellation Modes Math</h3><table>
+<thead>
+<tr>
+<th>Blend Mode</th>
+<th>Equation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Subtract</td>
+<td>B−A</td>
+<td>B minus A</td>
+</tr>
+<tr>
+<td>Divide</td>
+<td>B÷A</td>
+<td>B divided by A</td>
+</tr>
+</tbody></table>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:red;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">BLEND MODE</th>
+    <th class="tg-0pky">DESCRIPTION</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky" colspan="2">NORMAL GROUP</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Normal</td>
+    <td class="tg-0pky">The normal mode where no math is applied.</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Dissolve</td>
+    <td class="tg-0pky">The Dissolve blend mode on acts on transparent and partially transparent pixels – it treats transparency as a pixel pattern and applies a diffusion dither pattern.</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky" colspan="2">DARKEN GROUP</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Darken</td>
+    <td class="tg-0pky">If the pixels of the selected layer are darker than the ones on the layers below, they are kept in the image. If the pixels in the layer are lighter, they are replaced with the tones on the layers below (they show through to the selected layer), so basically the darker tones of all layers are kept. Note that this behavior is on a channel by channel basis, i.e., this rule is applied to each of the 3 RGB color channels separately. If you want to apply the same Darken blend mode behavior on a composite basis, use the Darker Color blend mode instead (however this typically results in harsher transitions).</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Multiply</td>
+    <td class="tg-0pky">The best mode for darkening. Works by multiplying the luminance levels of the current layer’s pixels with the pixels in the layers below. Great for creating shadows and removing whites and other light colors (while keeping the darker colors). As an analogy, think of the selected layer and all of the layers below as individual transparencies, and that they are stacked on top of each other, and then placed on an overhead projector. Using this analogy, the light passing through the lighter areas will have trouble getting through the darker areas, but the lighter areas will shine through other lighter areas with relative ease. If the Multiply blend mode isn’t dark enough for what you’re working on, try the Linear Burn or Color Burn modes. Math: A×B (Active Layer multiplied by Background Layer).</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Color Burn (Special 8)</td>
+    <td class="tg-0pky">Darker than Multiply, with more highly saturated mid-tones and reduced highlights. This is one of the “Special 8” that I mentioned earlier, where Fill and Opacity behave differently. Math: 1−(1−B)÷A (Background Layer inverted, divided by Active Layer, and the quotient is then inverted).</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Linear Burn (Special 8)</td>
+    <td class="tg-0pky">    Darker than Multiply, but less saturated than Color Burn. This is one of the “Special 8” that I mentioned earlier, where Fill and Opacity behave differently. Math: A+B−1 (Active Layer plus Background Layer, then white is subtracted from the sum (an inversion).</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Darker Color</td>
+    <td class="tg-0pky">Similar to the Darken blend mode, but darkens on the composite channel, instead of separate RGB color channels.</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky" colspan="2">LIGHTEN GROUP</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Lighten</td>
+    <td class="tg-0pky">If the pixels of the selected layer are lighter than the ones on the layers below, they are kept in the image (the opposite of the Darken blend mode). If the pixels in the layer are darker, they are replaced with the pixels on the layers below (they show through to the selected layer). Note that this behavior is on a channel by channel basis, i.e., this rule is applied to each of the 3 RGB color channels separately. If you want to apply the same Lighten blend mode behavior on a composite basis, use the Lighter Color blend mode instead (however this typically results in harsher transitions).</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Screen</td>
+    <td class="tg-0pky">Similar to the Lighten blend mode, but brighter and removes more of the dark pixels, and results in smoother transitions. Works somewhat like the Multiply blend mode, in that it multiplies the light pixels (instead of the dark pixels like the Multiply blend mode does). As an analogy, imagine the selected layer and each of the underlying layers as being 35mm slides, and each slide being placed in a separate projector (one slide for each projector), then all of the projectors are turned on and pointed at the same projector screen…this is the effect of the Screen blend mode. This is a great mode for making blacks disappear while keeping the whites, and for making glow effects. Math: 1−(1−A)×(1−B) (A inverted multiplied by B inverted, and the product is inverted).</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Color Dodge (Special 8)    </td>
+    <td class="tg-0pky">Brighter than the Screen blend mode. Results in an intense, contrasty color-typically results in saturated mid-tones and blown highlights. Math: B÷(1−A) (B divided by A inverted).</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Linear Dodge (Add) (Special 8)</td>
+    <td class="tg-0pky">Brighter than the Color Dodge blend mode, but less saturated and intense. This mode “Adds” the luminance levels. Math: A+B (A plus B).</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Lighter Color</td>
+    <td class="tg-0lax">Similar to the Lighten blend mode, but lightens on the composite channel, instead of separate color channels. Compares each pixel and gives you the lighter of the two (and usually results in harsher transitions).</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" colspan="2">CONTRAST GROUP</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">General Notes</td>
+    <td class="tg-0lax">All of the Contrast modes work by lightening the lightest pixels, darkening the darkest pixels, and dropping the gray mid-tones (50% gray). This is achieved by using combinations of the lightening and darkening modes from the Lighten and Darken groups. The Contrast blend modes work by checking if the colors are either darker than medium gray, or lighter than medium gray. If they are darker than medium gray, then a darkening blend mode is applied. Conversely, if the colors are brighter than medium gray, then a brightening mode is applied. The mid-point (50% gray), is dropped. For each of the Contrast blend modes, the math is applied against complementary (opposite) blend modes. For example, the Overlay blend mode uses a combination of the Multiply and Screen Blend modes, and these modes are complements of each other. The other complementary blend modes are: Darken/Lighten, Color Burn/Color Dodge, Linear Burn/Linear Dodge (Add), Darker Color /Lighter Color.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Overlay</td>
+    <td class="tg-0lax">Uses a combination of the Screen blend mode on the lighter pixels, and the Multiply blend mode on the darker pixels. It uses a half-strength application of these modes, and the mid-tones (50% gray) becomes transparent. One difference between the Overlay blend mode and the other Contrast blend modes, is that it makes its calculations based on the brightness of the layers below the active layer—all of the other Contrast modes make their calculations based on the brightness of the active layer. To get results similar to the Overlay mode, but where the blend mode favors the active layer, use the Hard Light blend mode (it uses similar logic, but favors the active layer). Another thing to note about the Overlay blend mode, is that it and the Hard Light blend mode are commuted versions of each other. This means that if you apply the Overlay blend mode to the active layer, you will get the same effect if you apply the Hard Light blend mode to the layer below, and then switch the order of the layers.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Soft Light</td>
+    <td class="tg-0lax">Uses a combination of the Screen blend mode on the lighter pixels, and the Multiply blend mode on the darker pixels (a half-strength application of both modes). Similar to the Overlay blend mode, but results in a more organic effect that is softer—results in somewhat transparent highlights and shadows.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Hard Light</td>
+    <td class="tg-0lax">Uses a combination of the Linear Dodge blend mode on the lighter pixels, and the Linear Burn blend mode on the darker pixels. It uses a half-strength application of these modes, and logic similar to the Overlay blend mode, but favors the active layer, as opposed to the underlying layers. The effect is more intense than the Overlay blend mode, and results in harsher light. Another thing to note about the Hard Light blend mode, is that it and the Overlay blend mode are commuted versions of each other. This means that if you apply the Hard Light blend mode to the active layer, you will get the same effect if you apply the Overlay blend mode to the layer below, and then switch the order of the layers.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Vivid Light (Special 8)</td>
+    <td class="tg-0lax">Uses a combination of the Color Dodge Mode on the lighter pixels, and the Color Burn blend mode on the darker pixels (a half-strength application of both modes). Similar to the Hard Mix blend mode in overdrive, and typically results in a more extreme effect.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Linear Light (Special 8)</td>
+    <td class="tg-0lax">Uses a combination of the Linear Dodge blend mode on the lighter pixels, and the Linear Burn blend mode on the darker pixels (a half-strength application of both modes). Similar to the Vivid Light blend mode in overdrive, and typically results in a more extreme effect.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Pin Light</td>
+    <td class="tg-0lax">Uses a combination of the Lighten blend mode on the lighter pixels, and the Darken blend mode on the darker pixels (a half-strength application of both modes). If the dark pixels on the active layer are darker than the dark pixels on the underlying layers, they will be visible, if they aren’t, they drop away. If the pixels on the active layer are lighter than the pixels on the underlying layers, they will also be visible, if they aren’t, they drop away. This is a wild blend mode that can result in patches or blotches (large noise), and it completely removes all mid-tones.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Hard Mix (Special 8)</td>
+    <td class="tg-0lax">Uses the Linear Light blend mode set to a threshold, so for each RGB color channel, pixels in each channel are converted to either all black or all white. Once the math is applied to each separate channel, and the composite channel is created, the resulting composite can contain up to 8 colors: Red, Green, Blue, Cyan, Magenta, Yellow, Black and White. Note that this mode is a member of the “Special 8″ blend modes, and it reacts differently to Fill Opacity than it does to Standard Opacity. If you reduce the Fill Opacity when using this mode, the number of colors in the image will increase beyond the previously mentioned 8 colors. This can be considered another one of the extreme blends modes, but adjusting the Fill Opacity, the effect can be tempered and great results can be attained.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" colspan="2">INVERSION GROUP</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Difference (Special 8)</td>
+    <td class="tg-0lax">Subtracts a pixel on the active layer, from an equivalent pixel in the composite view of the underlying layers (B-A), and results in only absolute numbers (the subtraction never produces a negative number—if it turns out to be a negative number, it’s converted into a positive number). It does a selective inversion where black never gets inverted, white inverts absolutely, and all of the other luminance levels invert based on their brightness on a channel-by-channel basis. With this blend mode, similar colors cancel each other, and the resulting color is black.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Exclusion</td>
+    <td class="tg-0lax">Subtracts a pixel on the active layer, from an equivalent pixel in the composite view of the underlying layers (B-A), and results in only absolute numbers (the subtraction never produces a negative number). It does a selective inversion where black never gets inverted, white inverts absolutely, and all of the other luminance levels invert based on their brightness on a channel-by-channel basis. With this blend mode, similar colors cancel each other, and the resulting color is gray. This mode is basically the same as the Difference blend mode, except when similar colors cancel each other, the resulting color is gray instead of black.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" colspan="2">CANCELLATION GROUP</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Subtract</td>
+    <td class="tg-0lax">Subtracts a pixel on the active layer, from an equivalent pixel in the composite view of the underlying layers (B-A). Similar to the Difference mode, but doesn’t convert the whites to an absolute number. Blacks don’t change any colors (because black = 0, and AnyColor – 0 = AnyColor), and whites drop out to blacks (because whites are such a large number, and all of the other numbers will be less than whites, so the resulting color will always be black). With this blend mode, similar colors cancel each other, and the resulting color is black. Math: B−A (B minus A).</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Divide</td>
+    <td class="tg-0lax">Divides a pixel on the active layer, from an equivalent pixel in the underlying layers on a channel by channel basis (B÷A). This mode typically results in extreme highlights because dividing the “standardized” luminance numbers results in a larger number. Whites don’t change any colors (because white = 1, and AnyColor÷1 = AnyColor). Similar colors turn white (because AnyColor÷Anycolor = 1), with the exception of blacks, which stay black because 0 can’t be divided by 0. Math: B÷A (B divided by A).</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" colspan="2">COMPONENT GROUP</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Hue</td>
+    <td class="tg-0lax">Keeps the Hue of the active layer, and blends the luminance and saturation of the underlying layers (you basically get the image from the lower layer with the colors of the top layer).</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Saturation</td>
+    <td class="tg-0lax">Keeps the saturation of the active layer, and blends the luminosity and hue from the underlying layers—where colors from the active layer are saturated, they will appear using the luminosity and hue from the underlying layers.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Color</td>
+    <td class="tg-0lax">Keeps the color of the active layer, and blends the hue and saturation (the color) of the active layer with the luminance of the lower layers (a handy way to change the color of an image). Another thing to note about the Color blend mode, is that it and the Luminosity blend mode are commuted versions of each other. This means that if you apply the Color blend mode to the active layer, you will get the same effect if you apply the Luminosity blend mode to the layer below, and then switch the order of the layers.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Luminosity</td>
+    <td class="tg-0lax">Keeps the luminance of the active layer, and blends it with hue and saturation (the color) of the composite view of the layers below. This results in the colors of the underlying layers being blended with the active layer, and replacing them. Another thing to note about the Luminosity blend mode, is that it and the Color blend mode are commuted versions of each other. This means that if you apply the Color blend mode to the active layer, you will get the same effect if you apply the Luminosity blend mode to the layer below, and then switch the order of the layers.</td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+<p><font size=20 style=background:red>下面进入案例</font></p>
+<h1 id="EACH-BLEND-MODE-EXPLAINED"><a href="#EACH-BLEND-MODE-EXPLAINED" class="headerlink" title="EACH BLEND MODE EXPLAINED"></a>EACH BLEND MODE EXPLAINED</h1><h3 id="Multiply-Blend-Mode-正片叠底模式"><a href="#Multiply-Blend-Mode-正片叠底模式" class="headerlink" title="#Multiply Blend Mode 正片叠底模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#multiply-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Multiply Blend Mode 正片叠底模式</h3><p><strong>Formula:</strong> Base x Blend</p>
+<p>The <strong><em>multiply blend mode</em></strong> multiplies the luminance levels of the blend and base color pixels. Result color is always darker.结果颜色总是较暗。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/10_Multiply-dlending-Mode.png" srcset="/img/loading.gif" alt="Multiply blending mode"></p>
+<p>Because white has a luminosity of 1, it has no effect on the pixels of the base color. Black has a luminosity of 0, so the result color would always be 0.因为白色具有 1 的亮度，因此对基本颜色的像素没有影响。黑色的亮度为 0，因此结果颜色始终为 0。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/11_Multiply-By-White-Black.png" srcset="/img/loading.gif" alt="Multiply by black and white colors"></p>
+<p> <font size=5 style=background:yellow><strong><em>Tip：</em></strong>The Multiply Blend Mode is useful for creating shadows.乘混合模式可用于创建阴影。</font></p>
+<h3 id="Screen-Blend-Mode-滤色模式"><a href="#Screen-Blend-Mode-滤色模式" class="headerlink" title="#Screen Blend Mode 滤色模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#screen-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Screen Blend Mode 滤色模式</h3><p><strong>Formula:</strong> 1 – ( 1-Base ) x ( 1-Blend )</p>
+<p>The <strong><em>screen blend mode</em></strong> multiplies the reverse values of the luminosity of the blend and base colors. Then it subtracts the product from the luminosity of white, which is one. It is opposite to the Multiply mode, so the brighter blend color, the brighter the result color would be.它与”乘法”模式相反，因此混合颜色越亮，结果颜色就越亮。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/12-Screen-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Screen blend mode example"></p>
+<p>Black has no effect on the base color.黑色对基本颜色没有影响。</p>
+<p>Tip:Along with the Multiply Blend mode, the <strong><em>Screen mode</em></strong> is one of the most popular blend modes in graphic design and photo manipulations. It is a perfect choice for highlights.</p>
+<p> <font size=5 style=background:yellow><strong><em>Tip：</em></strong>Along with the Multiply Blend mode, the <strong><em>Screen mode</em></strong> is one of the most popular blend modes in graphic design and photo manipulations. It is a perfect choice for highlights.与”倍增混合”模式一起，<strong><em>屏幕模式</em></strong>是图形设计和照片操作中最流行的混合模式之一。它是亮点的完美选择。</font></p>
+<h3 id="Overlay-Blend-Mode-叠加模式"><a href="#Overlay-Blend-Mode-叠加模式" class="headerlink" title="#Overlay Blend Mode 叠加模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#overlay-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Overlay Blend Mode 叠加模式</h3><p>The <strong><em>overlay blend mode</em></strong> boosts the contrast of the base image. Takes 50% of the grey as the threshold. If the pixels are brighter than 50%, it will brighten them even more and it would multiply the darker pixels.可增强基本图像的对比度。以 50% 的灰色为阈值。如果像素亮度超过 50%，它会使它们更加明亮，并且会使较暗的像素倍增。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/19_Overlay-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Overlay blend mode example"></p>
+<h3 id="Darken-Blend-Mode-变暗模式"><a href="#Darken-Blend-Mode-变暗模式" class="headerlink" title="#Darken Blend Mode 变暗模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#darken-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Darken Blend Mode 变暗模式</h3><p>The <strong><em>darken blend mode</em></strong> doesn’t blend colors. It makes a selection of the darkest pixels from both images, picking either base or blend colors.不混合颜色。它从两个图像中选择最暗的像素，选取基准颜色或混合颜色。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/13_Darken-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Darken blend mode example"></p>
+<h3 id="Lighten-Blend-Mode-变亮模式"><a href="#Lighten-Blend-Mode-变亮模式" class="headerlink" title="#Lighten Blend Mode 变亮模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#lighten-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Lighten Blend Mode 变亮模式</h3><p>The <strong><em>lighten blend mode</em></strong> is looking for the brighter pixels in both colors. If the pixels of the base color is darker than of those in the blend color, they would be replaced. Thus, it would vanish the darker pixels.寻找两种颜色的更亮像素。如果基本颜色的像素比混合颜色的像素暗，则替换这些像素。因此，它会消失较暗的像素。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/14_Lighten-Blend-Mode-Example-1.png" srcset="/img/loading.gif" alt="Lighten blend modes"></p>
+<p>The result color is always lighter, but bear in mind that selection and comparison of the pixels has a per-channel basis, so pixels would be selected for each RGB-channel separately.结果颜色始终较浅，但请记住，像素的选择和比较具有每个通道的基础，因此将分别为每个 RGB 通道选择像素。</p>
+<h3 id="Color-Dodge-Blend-Mode-颜色减淡模式"><a href="#Color-Dodge-Blend-Mode-颜色减淡模式" class="headerlink" title="#Color Dodge Blend Mode 颜色减淡模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#color-dodge-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Color Dodge Blend Mode 颜色减淡模式</h3><p><strong>Formula:</strong> Blend / ( 1 – Base )</p>
+<p>The <strong><em>color dodge blend</em></strong> mode blows the bright pixels of the base color while for the dark pixels the result would be very moderate. The end result would be higher contrast.<strong><em>颜色减淡模式</em></strong>提高底图亮色像素，而对于暗色像素，结果将非常平缓。最终结果将是更高的对比度。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/15_Color-Dodge-Example.png" srcset="/img/loading.gif" alt="Color dodge example"></p>
+<h3 id="Color-Burn-Blend-Mode-颜色加深模式"><a href="#Color-Burn-Blend-Mode-颜色加深模式" class="headerlink" title="#Color Burn Blend Mode 颜色加深模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#color-burn-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Color Burn Blend Mode 颜色加深模式</h3><p><strong>Formula:</strong> 1 – ( 1 – Blend ) / Base</p>
+<p>The <strong><em>color burn</em></strong> divides the inverted blend color luminosity by the luminosity of the base color. Then it inverts the result. The darker the base color, the more it is used into the result color.<strong><em>颜色加深模式</em></strong>将倒置混合颜色亮度除以基色的光度。然后反转结果。基础颜色越深，结果颜色的用色就越多。</p>
+<p>The result color is always darker with more contrast between light and dark pixels.结果颜色始终较暗，而浅色和深色像素之间的对比度会更大。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/16-Color-Burn-Blend-Example-1.png" srcset="/img/loading.gif" alt="Color Burn Example"></p>
+<h3 id="Hard-Light-Blend-Mode-强光模式"><a href="#Hard-Light-Blend-Mode-强光模式" class="headerlink" title="#Hard Light Blend Mode 强光模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#hard-light-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Hard Light Blend Mode 强光模式</h3><p>The <strong><em>hard light blend mode</em></strong> uses color dodge formula for bright pixels and color burn formula for darker pixels, boosting the contrast between them. Both formulas are at half straight.<strong><em>强光模式</em></strong>对明亮的像素使用颜色减淡公式，对较暗的像素使用颜色加深公式，增强它们之间的对比度。两个公式都是半直的。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/17-Hard-Light-blend-mode-example.png" srcset="/img/loading.gif" alt="Hard light blend mode example"></p>
+<h3 id="Soft-Light-Blend-Mode-柔光模式"><a href="#Soft-Light-Blend-Mode-柔光模式" class="headerlink" title="#Soft Light Blend Mode 柔光模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#soft-light-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Soft Light Blend Mode 柔光模式</h3><p>The <strong><em>soft light blend mode</em></strong> applies screen blend mode formula for pixels that are brighter than 50% grey and multiplies the pixels that are darker.<strong><em>软光模式</em></strong>对于亮度大于 50% 灰色像素使用滤色模式的公式，并乘以较暗的像素。</p>
+<p>Both formulas are used in the half straight, resulting in more soft and organic fusion.这两种配方均采用半直，导致更柔软和有机的融合。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/18_Soft-Light-Blend-mode.png" srcset="/img/loading.gif" alt="Soft light blend mode"></p>
+<p><font size=5 style=background:yellow><strong><em>Tip：</em></strong>Use the soft light blend mode to introduce the diffuse spotlight to the image.使用软光模式向图像引入漫射聚光灯。</font></p>
+<h3 id="Difference-Blend-Mode-差值模式"><a href="#Difference-Blend-Mode-差值模式" class="headerlink" title="#Difference Blend Mode 差值模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#difference-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Difference Blend Mode 差值模式</h3><p><strong>Formula:</strong> Brightest pixels – Darkest pixels.</p>
+<p>The <strong><em>Difference blend mode</em></strong> subtracts the darker pixels from the lighter. So it is looking for the brighter pixels in both blend and base colors and produces the subtraction then.<strong><em>差值模式</em></strong>从较亮中减去较暗的像素。因此，它正在寻找混合和基色中更亮的像素，然后产生减法。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/20_Differrence-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Difference blend mode example"></p>
+<p>The black color doesn’t have any impact on the color: <strong>Color – 0</strong>. 黑色对颜色没有任何影响：<strong>颜色 - 0</strong>。</p>
+<p>White makes 100% inversion of the color: <strong>1 – Color</strong>. 白色使颜色 100% 反转： <strong>1 - 颜色</strong></p>
+<h3 id="Exclusion-Blend-Mode-排除模式"><a href="#Exclusion-Blend-Mode-排除模式" class="headerlink" title="#Exclusion Blend Mode 排除模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#exclusion-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Exclusion Blend Mode 排除模式</h3><p><strong>Formula:</strong> Brightest pixels – Darkest pixels.</p>
+<p>The <strong><em>exclusion blend mode</em></strong> is a bit bizarre. It uses the difference blend mode math equation, but it ignores the results close to the zero, rendering them into the mid tones as if the result is 0.5. For similar colors, it produces grey instead of black. So result color is similar to those in difference blend mode but less saturated.它使用差分混合模式数学方程，但它忽略接近零的结果，将它们呈现为中间色调，就像结果为 0.5 一样。对于类似的颜色，它产生灰色而不是黑色。因此，结果颜色与差异混合模式相似，但饱和程度较低。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/21_Exclusion-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Exclusion blend mode example"></p>
+<p><font size=5 style=background:yellow><strong><em>Note：</em></strong>To explain the math behind these blend modes, let’s take a look at this example.<br>Luminosity: base color = 0.451, blend color = 0.450亮度：基本颜色 = 0.451，混合颜色 = 0.450<br></font></p>
+<p><font size=5 style=background:yellow><strong><em>Difference blend mode:</em></strong> 0.451 – 0.450 = 0.001. The result color is black结果颜色为黑色。</font></p>
+<p><font size=5 style=background:yellow><strong><em>Exclusion blend mode:</em></strong> 0.451 – 0.450=0.001 =~ 0.5. The result is grey.结果是灰色的。</font></p>
+<h3 id="Hue-Blend-Mode-色相模式"><a href="#Hue-Blend-Mode-色相模式" class="headerlink" title="#Hue Blend Mode 色相模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#hue-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Hue Blend Mode 色相模式</h3><p>The <strong><em>hue blend mode</em></strong> creates a result color with a hue of the blend layer and luminance and saturation of the base color.创建具有混合图层色调和基本颜色的亮度和饱和度的结果颜色。</p>
+<p>This is what we call “true recoloring” since the only hue is changed.这就是我们所说的”真正的重新着色”，因为唯一的色调被改变。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/22_Hue-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Hue blend mode example"></p>
+<h3 id="Saturation-Blend-Mode-饱和度模式"><a href="#Saturation-Blend-Mode-饱和度模式" class="headerlink" title="#Saturation Blend Mode 饱和度模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#saturation-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Saturation Blend Mode 饱和度模式</h3><p>The <strong><em>saturation blend mode</em></strong> gets the saturation from the blend color, <strong>hue and luminosity – from the base color</strong>.从混合颜色、<strong>色调和亮度 （ 从基本颜色</strong>） 获得饱和度。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/22_Saturation-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Saturation blend mode example"></p>
+<p><font size=5 style=background:yellow><strong><em>Tip:</em></strong> The saturation blend mode is good for greyscale effect, just use the blend color with a saturation value of 0, black or white for example饱和度混合模式适用于灰度效果，只需使用饱和值为 0 的混色，例如黑色或白色</font></p>
+<h3 id="Color-Blend-Mode-颜色模式"><a href="#Color-Blend-Mode-颜色模式" class="headerlink" title="#Color Blend Mode 颜色模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#color-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Color Blend Mode 颜色模式</h3><p>The <strong><em>color blend mode</em></strong> borrows the hue and saturation from the blend color and luminosity from the base.从基底的混合颜色和亮度中借用色调和饱和度。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/23_Color-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Color blend mode example"></p>
+<p><font size=5 style=background:yellow><strong><em>Tip:</em></strong> the color blend mode is an excellent choice for coloring monochromatic images or tinting color images.</font></p>
+<h3 id="Luminosity-Blend-Mode-亮度模式"><a href="#Luminosity-Blend-Mode-亮度模式" class="headerlink" title="#Luminosity Blend Mode 亮度模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#luminosity-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Luminosity Blend Mode 亮度模式</h3><p>The <strong><em>luminosity blend mode</em></strong> borrows the luminosity from the blend color and hue with saturation from the base color.借用混合颜色的亮度，色相从基本颜色中采用饱和度。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/24_Luminosity-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Luminosity blend mode example"></p>
+<h3 id="Linear-Burn-Blend-Mode-线性加深模式"><a href="#Linear-Burn-Blend-Mode-线性加深模式" class="headerlink" title="#Linear Burn Blend Mode 线性加深模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#linear-burn-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Linear Burn Blend Mode 线性加深模式</h3><p><strong>Formula:</strong> Base + Blend – 1</p>
+<p>The <strong><em>linear burn blend mode</em></strong> subtracts the luminosity of white from the sum of the luminosity of the base and the luminosity of the blend color.从底图的亮度和混合颜色的亮度之和中减去白色的光度。</p>
+<p>The result color is always darker than the base color, except you are using white for the blend color.结果颜色始终比底色暗，只不过您使用白色表示混合颜色。</p>
+<p>The linear burn is darker than color burn and multiply blend modes with low contrast and saturation because most of the negative and low values are rendered to black.线性加深比颜色加深暗，并且将混合模式与低对比度和饱和度相乘，因为大多数负值和低值呈现为黑色。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/25_Linear_Burn-Blend-mode-Example.png" srcset="/img/loading.gif" alt="Linear burn blend mode example"></p>
+<h3 id="Linear-Dodge-Blend-Mode-线性减淡模式"><a href="#Linear-Dodge-Blend-Mode-线性减淡模式" class="headerlink" title="#Linear Dodge Blend Mode 线性减淡模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#linear-dodge-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Linear Dodge Blend Mode 线性减淡模式</h3><p><strong>Formula:</strong> Base + Blend</p>
+<p>The <strong><em>linear dodge blend mode</em></strong> sums of the luminosities of both colors. Obviously, for the bright colors, this sum might exceed 1, so it would be rendered into the white.将两种颜色的亮度相加。显然，对于明亮的颜色，此总和可能超过 1，因此它将呈现为白色。</p>
+<p>The result color is usually very bright, has low saturation and contrast.结果颜色通常非常明亮，具有低饱和度和对比度。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/26_Linear_Dodge-Blend-mode-Example.png" srcset="/img/loading.gif" alt="Liner dodge blend mode example"></p>
+<h3 id="Linear-Light-Blend-Mode-线性光模式"><a href="#Linear-Light-Blend-Mode-线性光模式" class="headerlink" title="#Linear Light Blend Mode 线性光模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#linear-light-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Linear Light Blend Mode 线性光模式</h3><p>The <strong><em>linear light blend mode</em></strong> uses the linear dodge mode formula for pixels that are brighter than 50% grey, and the linear burn formula for darker pixels. Both equations are used in half straight.对亮度大于 50% 灰色的像素使用线性减淡公式，对较暗像素的线性加深公式。两个方程都半直使用。</p>
+<p>The selections and calculations are based on the luminosity of the blend color.选择和计算取决于于混合颜色的亮度。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/27_Linear-Light-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Linear light blend mode example"></p>
+<h3 id="Vivid-Light-Blend-Mode-亮光模式"><a href="#Vivid-Light-Blend-Mode-亮光模式" class="headerlink" title="#Vivid Light Blend Mode 亮光模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#vivid-light-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Vivid Light Blend Mode 亮光模式</h3><p>The <strong><em>vivid light blend mode</em></strong> uses a combination of the color burn for darker pixels and color dodge for lighter pixels.颜色加深与较暗像素和颜色减淡相结合，用于较亮的像素。</p>
+<p>The vivid light selects pixels to burn or dodge based on the luminosity of pixels of the blend color. If pixels are lighter than 50% grey, it dodges them, if they are darker – it burns them. Both equations are applied in the half of the straight.亮光模式根据混合颜色像素的亮度选择要加深或减淡像素。如果像素比 50% 灰色亮，它会减淡它们，如果它们较暗， 则会加深像素。两个方程都应用在直线的一半。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/28_Vivid-Light-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Vivid light blend mode example"></p>
+<h3 id="Pin-Light-Blend-Mode"><a href="#Pin-Light-Blend-Mode" class="headerlink" title="#Pin Light Blend Mode"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#pin-light-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Pin Light Blend Mode</h3><p>The <strong><em>pin light blend mode</em></strong> can darken or lighten images depending on the luminosity of the blend color.</p>
+<p>If the luminosity of the blend color is more than 50% grey, it applies lighten blend mode’s algorithm and replaces all the darker pixels of the base color by corresponding pixels of the blend color.</p>
+<p>If the luminosity of the blend color is less than 50%, it applies darken blend mode’s algorithm, so it drops all light pixels of the base color in favor of the corresponding pixels of the blend color.</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/29_Pin-Light-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Pin light blend mode example"></p>
+<p><strong><em>Note:\</em></strong> The pin light blend mode is a good choice for textures and special effects. Since you are in control of the luminosity of the blend color you can choose what is going to happen with the base color.<strong>*<br>*</strong></p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/34_Pin-Light-Special-Effects.png" srcset="/img/loading.gif" alt="Pin light special effects"></p>
+<h3 id="Divide-Blend-Mode-除法模式"><a href="#Divide-Blend-Mode-除法模式" class="headerlink" title="#Divide Blend Mode 除法模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#divide-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Divide Blend Mode 除法模式</h3><p><strong><em>Formula:</em></strong> Blend / Base</p>
+<p>The <strong><em>divide blend mode</em></strong> divides luminosity of the pixels of the blend color by the luminosity of the corresponding pixels of the base color.将混合颜色像素的亮度除以基本颜色相应像素的亮度。</p>
+<p>Gives an extreme spotlight effect, lightens the blend color dramatically producing near the white result color.提供极端的聚光灯效果，使混合颜色显著地在白色结果颜色附近产生。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/30_Divide-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Divide blend mode example"></p>
+<h3 id="Add-Blend-Mode-加法模式"><a href="#Add-Blend-Mode-加法模式" class="headerlink" title="#Add Blend Mode 加法模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#add-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Add Blend Mode 加法模式</h3><p><strong>Formula:</strong> Base + Blend</p>
+<p>The add blend mode sums up the luminosity values of both colors, resulting in the lighter color. Because the result color is always brighter, add blend mode is usually referred as “plus light” mode.添加混合模式汇总了两种颜色的亮度值，从而生成较浅的颜色。由于结果颜色始终更亮，因此添加混合模式通常称为”加光”模式。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/31_Add-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Add blend mode example"></p>
+<h3 id="Subtract-Blend-Mode-减法模式"><a href="#Subtract-Blend-Mode-减法模式" class="headerlink" title="#Subtract Blend Mode 减法模式"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#subtract-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Subtract Blend Mode 减法模式</h3><p><strong>Formula:</strong> Blend – Base</p>
+<p>The <strong><em>subtract blend mode</em></strong> subtracts pixel values of the base color from the corresponding values of the blend color. if the values are negative, the black is displayed. Result color is always darker.从混合颜色的相应值中减去基本颜色的像素值。如果值为负数，则显示黑色。结果颜色总是较暗。</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/32_Subtract-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Subtract blend mode example"></p>
+<h3 id="Hard-Mix-Blend-Mode"><a href="#Hard-Mix-Blend-Mode" class="headerlink" title="#Hard Mix Blend Mode"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#hard-mix-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Hard Mix Blend Mode</h3><p>The <strong><em>hard mix blend mode</em></strong> uses only eight colors to render a result color: red, green, magenta, blue, cyan, black and white.</p>
+<p>It goes through all RGB channels of the blend and base colors, rounding the values of the luminosity either to 1 or 0:</p>
+<ul>
+<li>lightens the light pixels to white</li>
+<li>darkens the dark pixels to black</li>
+</ul>
+<p>Then it turns all the 8 channels into the composite channel and scatters eight colors according to the composite channel luminosity values.</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/33_Hard-Mix-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Hard mix blend mode example"></p>
+<p><strong><em>Note:\</em></strong> Lowering the fill opacity of the blend color brings up more colors and eliminates the posterization<strong>*<br>*</strong></p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/35_Hard-Mix-Fill-Opacity.png" srcset="/img/loading.gif" alt="Hard mix fill opacity example"></p>
+<p>The blend modes that change the way how they work depending on the <strong><em>Fill Opacity</em></strong> are called “Special 8”.</p>
+<h2 id="UNIQUE-BLEND-MODES"><a href="#UNIQUE-BLEND-MODES" class="headerlink" title="#UNIQUE BLEND MODES"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#unique-blend-modes" target="_blank" rel="noopener"><em>#</em></a>UNIQUE BLEND MODES</h2><p>There three unique blend modes, that only Gravit Designer has. Oppose to the more conventional one, they are base on more eloquent math equations, such as quadratic or harmonic mean.</p>
+<h3 id="Power-Blend-Mode"><a href="#Power-Blend-Mode" class="headerlink" title="#Power Blend Mode"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#power-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Power Blend Mode</h3><p> <img src="https://documentation.designer.io/wp-content/uploads/2019/02/36_Power-Blend-Mode-Example-1.png" srcset="/img/loading.gif" alt="img"></p>
+<p><strong>Formula:</strong> √ ( Base² + Blend² ) / 2</p>
+<p>The <strong><em>power blend mode</em></strong> uses quadratic mean to blend colors. It is useful if you want the result color to be equally distant from the base and the blend colors.使用二次平均值混合颜色。如果希望结果颜色与基体和混合颜色同样远，则它很有用。</p>
+<p>It diesn’t have neutral colors. A black color makes image darker, white always makes image brighter.它没有中性色。黑色使图像变暗，白色总是使图像更亮。</p>
+<h3 id="Harmonic-Blend-Mode"><a href="#Harmonic-Blend-Mode" class="headerlink" title="#Harmonic Blend Mode"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#harmonic-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Harmonic Blend Mode</h3><p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/37_Harmonic-Blend-Modes-Example.png" srcset="/img/loading.gif" alt="Harmonic blend mode example"></p>
+<p><strong>Formula:</strong> 2 / ( 1/Base + 1/Blend )</p>
+<p>The <strong><em>harmonic blend mode</em></strong> uses harmonic mean to blend colors. In this equation two is divided by the sum of reciprocal values of blend and base colors.</p>
+<p>Doesn’t have neutral colors. White makes things whiter, black doesn’t produce a blend because you cannot divide by zero.</p>
+<p>Less agressive than the power blend mode , it can be used to add a subtle accent of the one color over the other.</p>
+<h3 id="Sine-Blend-Mode"><a href="#Sine-Blend-Mode" class="headerlink" title="#Sine Blend Mode"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#sine-blend-mode" target="_blank" rel="noopener"><em>#</em></a>Sine Blend Mode</h3><p><strong>Formula:</strong> sin( Blend + Base ) x π/2</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/38_Sine-Blend-Mode-Example.png" srcset="/img/loading.gif" alt="Sine blend mode example"></p>
+<p>The first blend mode to use the trigonometric function for blending colors. The <strong><em>sine blend mode</em></strong> is a sine of the sum of the blend and base colors, divided by two and multiplied by π (3.141828….).</p>
+<p>The result color is very unique and can be use for special effects.</p>
+<p>Black makes base color to appear brighter, white invertes the base color.</p>
+<p><img src="https://documentation.designer.io/wp-content/uploads/2019/02/40_Sine-blend-mode-Black-and-White-1.png" srcset="/img/loading.gif" alt="Sine black and white colors example"></p>
+<h2 id="THE-“SPECIAL-8”-BLEND-MODES"><a href="#THE-“SPECIAL-8”-BLEND-MODES" class="headerlink" title="#THE “SPECIAL 8” BLEND MODES"></a><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/#the-special-8-blend-modes" target="_blank" rel="noopener"><em>#</em></a>THE “<em>SPECIAL 8</em>” BLEND MODES</h2><p>There are eight blend modes that would respond differently to 40% of the <strong><em>Opacity</em></strong> and 40% of the <strong><em>Fill Opacity\</em></strong>.</p>
+<p>This special group of blending modes, that reacts differently on the <strong><em>Fill Opacity</em></strong> is called “<strong><em>Special Eight</em></strong>“. It extends your capabilities when dealing with these blend modes giving you more creative space to explore. So this “Special 8” universe of blending modes includes:</p>
+<ul>
+<li>Color Burn</li>
+<li>Linear Burn</li>
+<li>Color Dodge</li>
+<li>Linear Dodge (Add)</li>
+<li>Vivid Light</li>
+<li>Linear Light</li>
+<li>Hard Mix</li>
+<li>Difference</li>
+</ul>
+<p>For these blend modes, you can play with <strong><em>Fill Opacity</em></strong> of the blend color and see how it changes the result color. Start right now, explore with Gravit Designer!</p>
+<h1 id="Formulas-Table"><a href="#Formulas-Table" class="headerlink" title="Formulas Table"></a>Formulas Table</h1><table>
+<thead>
+<tr>
+<th><strong>Blend mode</strong></th>
+<th><strong>Commutativity</strong></th>
+<th><strong>Formula</strong></th>
+<th><strong>Addtl .info</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Darken</strong></td>
+<td>commutative</td>
+<td>min(Target,Blend)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Multiply</strong></td>
+<td>commutative</td>
+<td>Target * Blend</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Color Burn</strong></td>
+<td>non-commutative</td>
+<td>1 - (1-Target) / Blend</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Linear Burn</strong></td>
+<td>commutative</td>
+<td>Target + Blend - 1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Lighten</strong></td>
+<td>commutative</td>
+<td>max(Target,Blend)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Screen</strong></td>
+<td>commutative</td>
+<td>1 - (1-Target) * (1-Blend)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Color Dodge</strong></td>
+<td>non-commutative</td>
+<td>Target / (1-Blend)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Linear Dodge</strong></td>
+<td>commutative</td>
+<td>Target + Blend</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Overlay</strong></td>
+<td>non-commutative</td>
+<td>(Target &gt; 0.5) * (1 - (1-2<em>(Target-0.5)) * (1-Blend)) + (Target &lt;= 0.5) * ((2</em>Target) * Blend)</td>
+<td>A combination of multiply and screen.Also the same as Hard Light commuted</td>
+</tr>
+<tr>
+<td><strong>Soft Light</strong></td>
+<td>non-commutative</td>
+<td>(Blend &gt; 0.5) * (1 - (1-Target) * (1-(Blend-0.5))) + (Blend &lt;= 0.5) * (Target * (Blend+0.5))</td>
+<td>A combination of multiply and screen(The formula is only approximate)</td>
+</tr>
+<tr>
+<td><strong>Hard Light</strong></td>
+<td>non-commutative</td>
+<td>(Blend &gt; 0.5) * (1 - (1-Target) * (1-2<em>(Blend-0.5))) + (Blend &lt;= 0.5) * (Target * (2</em>Blend))</td>
+<td>A combination of multiply and screen. Also the same as Overlay commuted</td>
+</tr>
+<tr>
+<td><strong>Vivid Light</strong></td>
+<td>non-commutative</td>
+<td>(Blend &gt; 0.5) * (1 - (1-Target) / (2<em>(Blend-0.5))) + (Blend &lt;= 0.5) * (Target / (1-2</em>Blend))</td>
+<td>A combination of color burn and color dodge</td>
+</tr>
+<tr>
+<td><strong>Linear Light</strong></td>
+<td>non-commutative</td>
+<td>(Blend &gt; 0.5) * (Target + 2<em>(Blend-0.5)) + (Blend &lt;= 0.5) * (Target + 2</em>Blend - 1)</td>
+<td>A combination of linear burn and linear dodge</td>
+</tr>
+<tr>
+<td><strong>Pin Light</strong></td>
+<td>non-commutative</td>
+<td>(Blend &gt; 0.5) * (max(Target,2<em>(Blend-0.5))) + (Blend &lt;= 0.5) * (min(Target,2</em>Blend)))</td>
+<td>A combination of darken and lighten</td>
+</tr>
+<tr>
+<td><strong>Difference</strong></td>
+<td>commutative</td>
+<td>| Target - Blend |</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Exclusion</strong></td>
+<td>commutative</td>
+<td>0.5 - 2<em>(Target-0.5)</em>(Blend-0.5)</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="Preferences"><a href="#Preferences" class="headerlink" title="Preferences"></a>Preferences</h1><ol>
+<li><a href="https://en.wikipedia.org/wiki/Blend_modes" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Blend_modes</a></li>
+<li><a href="https://photoblogstop.com/photoshop/photoshop-blend-modes-explained" target="_blank" rel="noopener">https://photoblogstop.com/photoshop/photoshop-blend-modes-explained</a></li>
+<li><a href="http://www.deepskycolors.com/archive/2010/04/21/formulas-for-Photoshop-blending-modes.html" target="_blank" rel="noopener">http://www.deepskycolors.com/archive/2010/04/21/formulas-for-Photoshop-blending-modes.html</a></li>
+<li><a href="https://helpx.adobe.com/photoshop/using/blending-modes.html" target="_blank" rel="noopener">https://helpx.adobe.com/photoshop/using/blending-modes.html</a></li>
+<li><a href="https://documentation.designer.io/colors-gradients-textures/blending-modes/" target="_blank" rel="noopener">https://documentation.designer.io/colors-gradients-textures/blending-modes/</a></li>
+<li><a href="https://www.sohu.com/a/246975041_756829" target="_blank" rel="noopener">https://www.sohu.com/a/246975041_756829</a></li>
+</ol>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Substance-Designer/">Substance Designer</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Photoshop/">Photoshop</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Blend-Mode/">Blend Mode</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/23/%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91%E5%9C%A8Potplaer%E5%AE%9E%E6%97%B6%E7%BF%BB%E5%AD%97%E5%B9%95/">
+                        <span class="hidden-mobile">使用百度翻译在Potplaer实时翻译字幕</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+    <!-- APlayer 音乐播放器 -->
+    <div id="aplayer"></div>
+    <script defer src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+<script type="text/javascript">
+  var oldLoadAp = window.onload;
+  window.onload = function () {
+    oldLoadAp && oldLoadAp();
+
+    new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      autoplay: 'false' === 'true',
+      loop: 'all',
+      order: 'random',
+      theme: '#b7daff',
+      preload: 'none',
+      audio: [{"name":"Say So","artist":"Rainych","url":"/songs/Rainych - Say So.mp3","cover":"/img/cover.jpg"},{"name":"Summer Night","artist":"王一浩","url":"/songs/Summer Night - 王一浩.mp3","cover":"/img/cover.jpg"},{"name":"灌醉鸡儿","artist":"OELoop","url":"/songs/OELoop - 灌醉鸡儿.mp3","cover":"/img/cover.jpg"},{"name":"表态","artist":"梁博","url":"/songs/表态 - 梁博.mp3","cover":"/img/cover.jpg"},{"name":"Yummy","artist":"Justin Bieber&Summer Walker","url":"/songs/Yummy - Justin Bieber&Summer Walker.mp3","cover":"/img/cover.jpg"},{"name":"Side Effects","artist":"The Chainsmokers&Emily Warren","url":"/songs/Side Effects - The Chainsmokers&Emily Warren.mp3","cover":"/img/cover.jpg"}]
+    });
+  }
+</script>
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 6,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "学习Substance Designer blend节点前，了解Photoshop混合模式&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 80,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
