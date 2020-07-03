@@ -4,11 +4,74 @@
   
   
   <entry>
-    <title>Blender Driver的使用学习</title>
-    <link href="/2020/06/25/Blender-Driver%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/"/>
-    <url>/2020/06/25/Blender-Driver%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/</url>
+    <title>Rhinoceros Day2</title>
+    <link href="/2020/07/01/Rhinoceros-Day2/"/>
+    <url>/2020/07/01/Rhinoceros-Day2/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一-为什么Rhino"><a href="#一-为什么Rhino" class="headerlink" title="一 为什么Rhino"></a>一 为什么Rhino</h1><h2 id="1Rhino-VS-SketchUp"><a href="#1Rhino-VS-SketchUp" class="headerlink" title="1Rhino VS. SketchUp"></a>1Rhino VS. SketchUp</h2><p><a href="https://www.g2.com/compare/rhinoceros-vs-sketchup" target="_blank" rel="noopener">Compare Rhinoceros vs SketchUp</a></p><p>本质：</p><p>Rhino→CAID→NURBS</p><p>SketchUp→CG→Polygon</p><p>猜一猜哪些是Polygon哪些是NURBS建模软件呢？</p><p>各有优势，各有劣势。</p><h2 id="2NURBS-VS-Polygon"><a href="#2NURBS-VS-Polygon" class="headerlink" title="2NURBS VS. Polygon"></a>2NURBS VS. Polygon</h2><h3 id="2-1什么是NURBS"><a href="#2-1什么是NURBS" class="headerlink" title="2.1什么是NURBS"></a>2.1什么是NURBS</h3><p><a href="https://www.rhino3d.com/nurbs" target="_blank" rel="noopener">McNeel</a></p><p><a href="https://en.wikipedia.org/wiki/Non-uniform_rational_B-spline" target="_blank" rel="noopener">Wiki</a></p><p><a href="https://app-help.vectorworks.net/2020/eng/VW2020_Guide/Shapes2/Concept_NURBS_curves_and_surfaces.htm" target="_blank" rel="noopener">VectorWorks</a></p><p><a href="https://www.aliasworkbench.com/theoryBuilders/TB1_nurbs1.htm" target="_blank" rel="noopener">Alias</a></p><p><a href="http://www.pilot3d.com/NurbSecrets.htm" target="_blank" rel="noopener">Pilot3d</a></p><h3 id="2-2什么是Polygon"><a href="#2-2什么是Polygon" class="headerlink" title="2.2什么是Polygon"></a>2.2什么是Polygon</h3><p>想一想，使用的SketchUp 有什么特性呢？</p><p>使用SketchUp的时候有哪些爽点和槽点呢？</p><h3 id="2-3NURBS和Polygon的区别"><a href="#2-3NURBS和Polygon的区别" class="headerlink" title="2.3NURBS和Polygon的区别"></a>2.3NURBS和Polygon的区别</h3><p><a href="https://viscircle.de/what-is-the-difference-between-polygon-modeling-and-nurbs/?lang=en" target="_blank" rel="noopener">Viscircle</a></p><p><a href="https://discourse.mcneel.com/t/mesh-or-surface-understanding-the-difference/75151" target="_blank" rel="noopener">Rhinoceros Forums</a></p><p>你的选择？</p><p>各有优缺点。</p><p>都需要掌握。</p><p>NURBS：<strong>Rhinoceros</strong>，Catia，Alias，Solidworks……</p><p>Polygon：SketchUp，Maya，Modo，<strong>Blender</strong>……</p><h2 id="3曲线"><a href="#3曲线" class="headerlink" title="3曲线"></a>3曲线</h2><p>数学？几何？</p><p> <a href="Rhinoceros-Day2.assets\L-09_BSplines_NURBS.pdf">Computer Graphics Ⅰ CS 430/536 B-Splines and NURBS</a> </p><p>试一试 </p><p><a href="Rhinoceros-Day2.assets\NURBS-en.swf">NURBS-en.swf</a> </p><p>关系</p><p><img src="Rhinoceros-Day2.assets/276683-20180417112712069-742103752.bmp" srcset="/img/loading.gif" alt="关系"></p><h3 id="3-1Beizier"><a href="#3-1Beizier" class="headerlink" title="3.1Beizier"></a>3.1Beizier</h3><h3 id="3-2B-Spline"><a href="#3-2B-Spline" class="headerlink" title="3.2B-Spline"></a>3.2B-Spline</h3><h3 id="3-3NURBS"><a href="#3-3NURBS" class="headerlink" title="3.3NURBS"></a>3.3NURBS</h3><p>公差</p><p>连续性</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Rhinoceros</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Rhinoceros</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Rhinoceros基础教学计划</title>
+    <link href="/2020/07/01/Rhinoceros%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A6%E8%AE%A1%E5%88%92/"/>
+    <url>/2020/07/01/Rhinoceros%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A6%E8%AE%A1%E5%88%92/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一Rhinoceros篇"><a href="#一Rhinoceros篇" class="headerlink" title="一Rhinoceros篇"></a>一Rhinoceros篇</h1><h2 id="Day1："><a href="#Day1：" class="headerlink" title="Day1："></a>Day1：</h2><h2 id="Day2："><a href="#Day2：" class="headerlink" title="Day2："></a>Day2：</h2><h2 id="Day3："><a href="#Day3：" class="headerlink" title="Day3："></a>Day3：</h2><h2 id="Day4："><a href="#Day4：" class="headerlink" title="Day4："></a>Day4：</h2><h2 id="Day5："><a href="#Day5：" class="headerlink" title="Day5："></a>Day5：</h2><h2 id="Day6："><a href="#Day6：" class="headerlink" title="Day6："></a>Day6：</h2><h1 id="二Grasshopper篇"><a href="#二Grasshopper篇" class="headerlink" title="二Grasshopper篇"></a>二Grasshopper篇</h1><h2 id="Day7："><a href="#Day7：" class="headerlink" title="Day7："></a>Day7：</h2><h2 id="Day8："><a href="#Day8：" class="headerlink" title="Day8："></a>Day8：</h2><h2 id="Day9："><a href="#Day9：" class="headerlink" title="Day9："></a>Day9：</h2><h2 id="Day10："><a href="#Day10：" class="headerlink" title="Day10："></a>Day10：</h2><h2 id="Day11："><a href="#Day11：" class="headerlink" title="Day11："></a>Day11：</h2><h2 id="Day12："><a href="#Day12：" class="headerlink" title="Day12："></a>Day12：</h2>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Rhinoceros Day1</title>
+    <link href="/2020/07/01/Rhinoceros-Day1/"/>
+    <url>/2020/07/01/Rhinoceros-Day1/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一-写在前面："><a href="#一-写在前面：" class="headerlink" title="一 写在前面："></a>一 写在前面：</h1><ol><li>Rhinoceros本系列教程的制备，起因为给力手绘所托，进行网络授课。</li><li>我是建筑淆淆士小梁，未毕业，未工作，是个菜鸟。</li><li>第一次讲课。从学生到讲师，诚惶诚恐。可能时长不能把握的很好。内容不能让大家满意。也可能出现纰漏。不周处请谅解。</li><li>短短的几天课时，甚至几周，不能把世界上任何一个软件完全学会。希望大家认可Rhinoceros，认可Grasshopper，不要畏惧，不要抵触，温故知新，熟能生巧。软件不会成为设计的瓶颈和绊脚石。</li><li>我不是老师，也不是学长，是和你们一起学习软件的伙伴，只不过比大家早学了一些时间，希望能一起探索，一起进步。</li></ol><h1 id="二-正文"><a href="#二-正文" class="headerlink" title="二 正文"></a>二 正文</h1><h2 id="1前期准备"><a href="#1前期准备" class="headerlink" title="1前期准备"></a>1前期准备</h2><h3 id="1-1Rhinoceros下载"><a href="#1-1Rhinoceros下载" class="headerlink" title="1.1Rhinoceros下载"></a>1.1Rhinoceros下载</h3><p>官网<a href="https://www.rhino3d.com/download下载" target="_blank" rel="noopener">https://www.rhino3d.com/download下载</a></p><ol><li><strong><a href="https://www.rhino3d.com/download/rhino-for-windows/6/evaluation" target="_blank" rel="noopener">Rhino 6 for Windows - 试用版</a></strong> - 在<strong>90天</strong>内试用此<strong>全功能</strong>版本，90天后将无法保存且插件也无法打开，除非<a href="https://www.rhino3d.com/sales" target="_blank" rel="noopener"><strong>购买</strong></a>一个许可证。</li><li><strong><a href="https://www.rhino3d.com/download/rhino-for-windows/6/latest" target="_blank" rel="noopener">Rhino 6 for Windows - 最新版 </a></strong>- 需要使用 Rhino 6 <strong>授权码</strong>。</li></ol><p>国内授权码购买：<strong><a href="https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-4526448129.2.733a5572FmKJIX&id=562908541948" target="_blank" rel="noopener">淘宝</a></strong>    购买教育版</p><p>购买授权码之后会在邮箱收到授权信息，请妥善保管，不要泄露。</p><h3 id="1-2Rhinoceros安装"><a href="#1-2Rhinoceros安装" class="headerlink" title="1.2Rhinoceros安装"></a>1.2Rhinoceros安装</h3><p>注意选择中英双语。尽量安装在C\Program File\</p><p>尽量使用英文界面。</p><h3 id="1-3插件安装"><a href="#1-3插件安装" class="headerlink" title="1.3插件安装"></a>1.3插件安装</h3><p>平台<a href="https://www.food4rhino.com/。" target="_blank" rel="noopener">https://www.food4rhino.com/。</a></p><p>推荐插件：</p><ol><li><a href="https://www.food4rhino.com/app/sectiontools-rhino" target="_blank" rel="noopener">Sectiontools For Rhino</a></li><li><a href="https://www.food4rhino.com/app/sunflower" target="_blank" rel="noopener">Sunflower</a></li><li><a href="https://www.food4rhino.com/app/visualarq" target="_blank" rel="noopener">VisualARQ</a></li><li><a href="https://www.food4rhino.com/app/trace" target="_blank" rel="noopener">TRACE</a></li></ol><h2 id="2界面"><a href="#2界面" class="headerlink" title="2界面"></a>2界面</h2><p>默认界面：</p><ol><li>菜单栏</li><li><strong>指令历史窗</strong></li><li>工具集合栏</li><li>常用指令边栏</li><li><strong>工作视窗</strong></li><li><strong>状态栏</strong></li><li>捕捉选项栏</li><li>信息栏</li></ol><h3 id="2-1菜单栏"><a href="#2-1菜单栏" class="headerlink" title="2.1菜单栏"></a>2.1菜单栏</h3><p>菜单栏的命令包含常用的指令。配合输入指令，图标使用。</p><p>Options→Appearance→Show the following items→Menu</p><h3 id="2-2-指令历史窗"><a href="#2-2-指令历史窗" class="headerlink" title="2.2 指令历史窗"></a>2.2 指令历史窗</h3><p>界面中不可或缺的部分。F2</p><p>Options→Appearance→Show the following items→Command prompt</p><h2 id="2-3工具列集合栏"><a href="#2-3工具列集合栏" class="headerlink" title="2.3工具列集合栏"></a>2.3工具列集合栏</h2><p>可以根据需求增添指令，标签。齿轮可选择锁定。</p><p>Options→Toolbars→Standard Toolbar Group</p><h3 id="2-4常用指令边栏"><a href="#2-4常用指令边栏" class="headerlink" title="2.4常用指令边栏"></a>2.4常用指令边栏</h3><p>滚动鼠标中键，与工具栏关联</p><p>Options→Toolbars→Size and Styles→Visibility→Sidebar visible</p><h3 id="2-5工作视窗"><a href="#2-5工作视窗" class="headerlink" title="2.5工作视窗"></a>2.5工作视窗</h3><p>标签栏</p><p>4View ZEA</p><p>NewViewport</p><p>CloseViewport</p><h3 id="2-6面板"><a href="#2-6面板" class="headerlink" title="2.6面板"></a>2.6面板</h3><p>F3→Properties</p><h3 id="2-7捕捉选项栏"><a href="#2-7捕捉选项栏" class="headerlink" title="2.7捕捉选项栏"></a>2.7捕捉选项栏</h3><p>Osnap</p><h3 id="2-8状态栏"><a href="#2-8状态栏" class="headerlink" title="2.8状态栏"></a>2.8状态栏</h3><p>单位，图层，各种选项</p><ul><li>锁定格点</li><li>正交</li><li>平面</li><li><strong>捕捉</strong></li><li>智慧轨迹</li><li><strong>操作轴</strong></li><li><strong>记录建构历史</strong></li><li><strong>过滤器</strong></li></ul><h2 id="3视窗操作"><a href="#3视窗操作" class="headerlink" title="3视窗操作"></a>3视窗操作</h2><h3 id="3-1移动旋转缩放放大最大化最小化视窗"><a href="#3-1移动旋转缩放放大最大化最小化视窗" class="headerlink" title="3.1移动旋转缩放放大最大化最小化视窗"></a>3.1移动旋转缩放放大最大化最小化视窗</h3><p>旋转：<code>RMB</code></p><p>平移：<code>Shift</code>+<code>RMB</code></p><p>缩放：<code>Ctrl</code>+<code>RMB</code></p><p>视口摆动：<code>Ctrl</code>+<code>Alt</code>+<code>RMB</code>，<code>Shift</code>+<code>Alt</code>+<code>RMB</code></p><p>切换视窗大小：<code>Double  LMC</code>左上角标签</p><h3 id="3-2-加选减选框选"><a href="#3-2-加选减选框选" class="headerlink" title="3.2 加选减选框选"></a>3.2 加选减选框选</h3><p>点选：<code>LMC</code></p><p>加选：<code>Shift</code>+<code>LMC</code></p><p>减选：<code>Ctrl</code>+<code>LMC</code></p><p>非贪婪框选：左上角<code>LMB</code></p><p>贪婪框选：右下角<code>LMB</code></p><h3 id="3-3切换视窗"><a href="#3-3切换视窗" class="headerlink" title="3.3切换视窗"></a>3.3切换视窗</h3><ul><li><code>Ctrl</code>+<code>Tab</code></li><li>Status bar <code>LMC</code></li></ul><h2 id="4自定义工具列"><a href="#4自定义工具列" class="headerlink" title="4自定义工具列"></a>4自定义工具列</h2><h3 id="4-1默认工具列"><a href="#4-1默认工具列" class="headerlink" title="4.1默认工具列"></a>4.1默认工具列</h3><p>Options→Toolbars→Files→Default</p><p>C:\Users\==yourname==\AppData\Roaming\McNeel\Rhinoceros\6.0\UI\default.rui</p><h3 id="4-2新增工具列"><a href="#4-2新增工具列" class="headerlink" title="4.2新增工具列"></a>4.2新增工具列</h3><p><code>RBC</code>→<code>NEW</code></p><h3 id="4-3导入工具列"><a href="#4-3导入工具列" class="headerlink" title="4.3导入工具列"></a>4.3导入工具列</h3><p>Options→Toolbars→Files→Default→Close→Import Toolbars</p><h3 id="4-4弹出工具列"><a href="#4-4弹出工具列" class="headerlink" title="4.4弹出工具列"></a>4.4弹出工具列</h3><p>Options→Mouse→Middle mouse button→Popup this Toolbar</p><h3 id="4-5自定义弹出"><a href="#4-5自定义弹出" class="headerlink" title="4.5自定义弹出"></a>4.5自定义弹出</h3><p>移动：<code>Shift</code>+<code>LMB Drag</code></p><p>复制：<code>Ctrl</code>+<code>LMB Drag</code></p><h2 id="5显示模式"><a href="#5显示模式" class="headerlink" title="5显示模式"></a>5显示模式</h2><h3 id="5-1更改显示模式"><a href="#5-1更改显示模式" class="headerlink" title="5.1更改显示模式"></a>5.1更改显示模式</h3><p>视窗左上角标签栏下拉列表，或输入指令：SetDisplayMode_Mode_</p><ol><li>线框模式 Wireframe</li><li>着色模式 Shaded</li><li>渲染模式 Rendered</li><li>半透明模式 Ghosted</li><li>极地模式 Arctic</li><li>光线追踪 Raytraced</li><li>……</li></ol><p>可单独设置物件显示模式 输入指令：SetObjectDisplayMode</p><h3 id="5-2增删显示模式"><a href="#5-2增删显示模式" class="headerlink" title="5.2增删显示模式"></a>5.2增删显示模式</h3><p>Options→View→Display Mode </p><p>New，Copy，Delete，Import ，Export</p><p>……</p><h2 id="6面板"><a href="#6面板" class="headerlink" title="6面板"></a>6面板</h2><ul><li><strong>Display</strong></li><li><strong>Properties</strong></li><li><strong>Layers</strong></li><li>Layer States</li><li>Materials</li><li>Named CPlanes</li><li>Named Views</li><li>……</li></ul><h3 id="6-1-Display"><a href="#6-1-Display" class="headerlink" title="6.1 Display"></a>6.1 Display</h3><p>不同显示模式不同选项</p><ul><li>切换模式</li><li>更改背景颜色</li><li>显示选项</li><li>Backface Color 更改艳丽颜色方便观察</li><li>Clipping Plane 勾选Show Fills Show Edges</li></ul><h3 id="6-2Properties"><a href="#6-2Properties" class="headerlink" title="6.2Properties"></a>6.2Properties</h3><p>不同数据类型不同选项</p><ul><li>更改名称</li><li>更改显示颜色打印颜色</li><li>更改线性</li><li>更改显示线宽</li><li>更改材质</li><li>更改UV</li><li>……</li></ul><p>切换为打印模式命令 PrintDisplay_Color_Print</p><h3 id="6-3-Layers"><a href="#6-3-Layers" class="headerlink" title="6.3 Layers"></a>6.3 Layers</h3><ul><li>Filters</li><li>Tools</li><li>增加图层与子图层</li><li>复制图层与复制物件</li><li>移动物件所属图层</li><li>……</li></ul><h2 id="7物件的快速变动"><a href="#7物件的快速变动" class="headerlink" title="7物件的快速变动"></a>7物件的快速变动</h2><p>移动：<code>LMB Drag</code></p><p>复制：<code>Alt</code> +<code>LMB Drag</code></p><p>垂直：<code>Ctrl</code>+<code>LMB Drag</code></p><p>正交：F8 或 状态栏Ortho</p><p>Gumball：</p><ul><li>R→X axis ；G→Y axis ；B→Z axis</li><li>移动：拖动箭头（<code>LMC</code>设置具体数值）</li><li>旋转：拖动弧线（<code>LMC</code>设置具体数值）</li><li>缩放：拖动方块（<code>LMC</code>设置具体数值）</li><li>白色圆圈进行设置</li></ul><p>锁定方向：<code>Tab</code></p><h1 id="三-作业"><a href="#三-作业" class="headerlink" title="三 作业"></a>三 作业</h1><ol><li>定义自己的窗口</li><li>预习指令，思考建模需要那些常用命令，定义自己的工具列中键。</li><li>思考自己以往的课程设计的建模逻辑，思考使用su建模是否还有优化的可能，如何优化。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Rhinoceros</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Rhinoceros</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Blender Driver的使用学习1</title>
+    <link href="/2020/06/25/Blender-Driver%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A01/"/>
+    <url>/2020/06/25/Blender-Driver%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A01/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><video src="Blender-Driver%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0.assets/20200625_163557.mp4"></video></p>]]></content>
     
     
     <categories>
@@ -25,6 +88,19 @@
       <tag>Driver</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Blender-Driver的使用学习</title>
+    <link href="/2020/06/25/Blender-Driver%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2020/06/25/Blender-Driver%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/</url>
+    
+    <content type="html"><![CDATA[<video src="Blender-Driver%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0.assets/20200625_163557.mp4"></video>]]></content>
+    
+    
     
   </entry>
   

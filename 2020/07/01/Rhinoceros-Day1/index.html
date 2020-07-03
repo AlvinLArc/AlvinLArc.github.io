@@ -17,7 +17,7 @@
   <meta name="description" content="grasshopper学习中，blender学习中，python不会中，substance designer不会中">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>学习计划_2020_6 - 建筑淆淆士小梁的淆习笔记</title>
+  <title>Rhinoceros Day1 - 建筑淆淆士小梁的淆习笔记</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -199,8 +199,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-06-24 16:51">
-      June 24, 2020 pm
+    <time datetime="2020-07-01 09:31">
+      July 1, 2020 am
     </time>
   </div>
 
@@ -210,7 +210,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      76 字
+      1.2k 字
     </span>
   
 
@@ -220,7 +220,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      14
        分钟
     </span>
   
@@ -251,54 +251,156 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <p>优先级：</p>
+              <h1 id="一-写在前面："><a href="#一-写在前面：" class="headerlink" title="一 写在前面："></a>一 写在前面：</h1><ol>
+<li>Rhinoceros本系列教程的制备，起因为给力手绘所托，进行网络授课。</li>
+<li>我是建筑淆淆士小梁，未毕业，未工作，是个菜鸟。</li>
+<li>第一次讲课。从学生到讲师，诚惶诚恐。可能时长不能把握的很好。内容不能让大家满意。也可能出现纰漏。不周处请谅解。</li>
+<li>短短的几天课时，甚至几周，不能把世界上任何一个软件完全学会。希望大家认可Rhinoceros，认可Grasshopper，不要畏惧，不要抵触，温故知新，熟能生巧。软件不会成为设计的瓶颈和绊脚石。</li>
+<li>我不是老师，也不是学长，是和你们一起学习软件的伙伴，只不过比大家早学了一些时间，希望能一起探索，一起进步。</li>
+</ol>
+<h1 id="二-正文"><a href="#二-正文" class="headerlink" title="二 正文"></a>二 正文</h1><h2 id="1前期准备"><a href="#1前期准备" class="headerlink" title="1前期准备"></a>1前期准备</h2><h3 id="1-1Rhinoceros下载"><a href="#1-1Rhinoceros下载" class="headerlink" title="1.1Rhinoceros下载"></a>1.1Rhinoceros下载</h3><p>官网<a href="https://www.rhino3d.com/download下载" target="_blank" rel="noopener">https://www.rhino3d.com/download下载</a></p>
+<ol>
+<li><strong><a href="https://www.rhino3d.com/download/rhino-for-windows/6/evaluation" target="_blank" rel="noopener">Rhino 6 for Windows - 试用版</a></strong> - 在<strong>90天</strong>内试用此<strong>全功能</strong>版本，90天后将无法保存且插件也无法打开，除非<a href="https://www.rhino3d.com/sales" target="_blank" rel="noopener"><strong>购买</strong></a>一个许可证。</li>
+<li><strong><a href="https://www.rhino3d.com/download/rhino-for-windows/6/latest" target="_blank" rel="noopener">Rhino 6 for Windows - 最新版 </a></strong>- 需要使用 Rhino 6 <strong>授权码</strong>。</li>
+</ol>
+<p>国内授权码购买：<strong><a href="https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-4526448129.2.733a5572FmKJIX&id=562908541948" target="_blank" rel="noopener">淘宝</a></strong>    购买教育版</p>
+<p>购买授权码之后会在邮箱收到授权信息，请妥善保管，不要泄露。</p>
+<h3 id="1-2Rhinoceros安装"><a href="#1-2Rhinoceros安装" class="headerlink" title="1.2Rhinoceros安装"></a>1.2Rhinoceros安装</h3><p>注意选择中英双语。尽量安装在C\Program File\</p>
+<p>尽量使用英文界面。</p>
+<h3 id="1-3插件安装"><a href="#1-3插件安装" class="headerlink" title="1.3插件安装"></a>1.3插件安装</h3><p>平台<a href="https://www.food4rhino.com/。" target="_blank" rel="noopener">https://www.food4rhino.com/。</a></p>
+<p>推荐插件：</p>
+<ol>
+<li><a href="https://www.food4rhino.com/app/sectiontools-rhino" target="_blank" rel="noopener">Sectiontools For Rhino</a></li>
+<li><a href="https://www.food4rhino.com/app/sunflower" target="_blank" rel="noopener">Sunflower</a></li>
+<li><a href="https://www.food4rhino.com/app/visualarq" target="_blank" rel="noopener">VisualARQ</a></li>
+<li><a href="https://www.food4rhino.com/app/trace" target="_blank" rel="noopener">TRACE</a></li>
+</ol>
+<h2 id="2界面"><a href="#2界面" class="headerlink" title="2界面"></a>2界面</h2><p>默认界面：</p>
+<ol>
+<li>菜单栏</li>
+<li><strong>指令历史窗</strong></li>
+<li>工具集合栏</li>
+<li>常用指令边栏</li>
+<li><strong>工作视窗</strong></li>
+<li><strong>状态栏</strong></li>
+<li>捕捉选项栏</li>
+<li>信息栏</li>
+</ol>
+<h3 id="2-1菜单栏"><a href="#2-1菜单栏" class="headerlink" title="2.1菜单栏"></a>2.1菜单栏</h3><p>菜单栏的命令包含常用的指令。配合输入指令，图标使用。</p>
+<p>Options→Appearance→Show the following items→Menu</p>
+<h3 id="2-2-指令历史窗"><a href="#2-2-指令历史窗" class="headerlink" title="2.2 指令历史窗"></a>2.2 指令历史窗</h3><p>界面中不可或缺的部分。F2</p>
+<p>Options→Appearance→Show the following items→Command prompt</p>
+<h2 id="2-3工具列集合栏"><a href="#2-3工具列集合栏" class="headerlink" title="2.3工具列集合栏"></a>2.3工具列集合栏</h2><p>可以根据需求增添指令，标签。齿轮可选择锁定。</p>
+<p>Options→Toolbars→Standard Toolbar Group</p>
+<h3 id="2-4常用指令边栏"><a href="#2-4常用指令边栏" class="headerlink" title="2.4常用指令边栏"></a>2.4常用指令边栏</h3><p>滚动鼠标中键，与工具栏关联</p>
+<p>Options→Toolbars→Size and Styles→Visibility→Sidebar visible</p>
+<h3 id="2-5工作视窗"><a href="#2-5工作视窗" class="headerlink" title="2.5工作视窗"></a>2.5工作视窗</h3><p>标签栏</p>
+<p>4View ZEA</p>
+<p>NewViewport</p>
+<p>CloseViewport</p>
+<h3 id="2-6面板"><a href="#2-6面板" class="headerlink" title="2.6面板"></a>2.6面板</h3><p>F3→Properties</p>
+<h3 id="2-7捕捉选项栏"><a href="#2-7捕捉选项栏" class="headerlink" title="2.7捕捉选项栏"></a>2.7捕捉选项栏</h3><p>Osnap</p>
+<h3 id="2-8状态栏"><a href="#2-8状态栏" class="headerlink" title="2.8状态栏"></a>2.8状态栏</h3><p>单位，图层，各种选项</p>
 <ul>
-<li><font size = 5px style="background:red">4</font></li>
-<li><font size = 5px style="background:Yellow">3</font></li>
-<li><font size = 5px style="background:Blue">2</font></li>
-<li><font size = 5px style="background:green">1</font></li>
+<li>锁定格点</li>
+<li>正交</li>
+<li>平面</li>
+<li><strong>捕捉</strong></li>
+<li>智慧轨迹</li>
+<li><strong>操作轴</strong></li>
+<li><strong>记录建构历史</strong></li>
+<li><strong>过滤器</strong></li>
 </ul>
-<p>Grasshopper:</p>
+<h2 id="3视窗操作"><a href="#3视窗操作" class="headerlink" title="3视窗操作"></a>3视窗操作</h2><h3 id="3-1移动旋转缩放放大最大化最小化视窗"><a href="#3-1移动旋转缩放放大最大化最小化视窗" class="headerlink" title="3.1移动旋转缩放放大最大化最小化视窗"></a>3.1移动旋转缩放放大最大化最小化视窗</h3><p>旋转：<code>RMB</code></p>
+<p>平移：<code>Shift</code>+<code>RMB</code></p>
+<p>缩放：<code>Ctrl</code>+<code>RMB</code></p>
+<p>视口摆动：<code>Ctrl</code>+<code>Alt</code>+<code>RMB</code>，<code>Shift</code>+<code>Alt</code>+<code>RMB</code></p>
+<p>切换视窗大小：<code>Double  LMC</code>左上角标签</p>
+<h3 id="3-2-加选减选框选"><a href="#3-2-加选减选框选" class="headerlink" title="3.2 加选减选框选"></a>3.2 加选减选框选</h3><p>点选：<code>LMC</code></p>
+<p>加选：<code>Shift</code>+<code>LMC</code></p>
+<p>减选：<code>Ctrl</code>+<code>LMC</code></p>
+<p>非贪婪框选：左上角<code>LMB</code></p>
+<p>贪婪框选：右下角<code>LMB</code></p>
+<h3 id="3-3切换视窗"><a href="#3-3切换视窗" class="headerlink" title="3.3切换视窗"></a>3.3切换视窗</h3><ul>
+<li><code>Ctrl</code>+<code>Tab</code></li>
+<li>Status bar <code>LMC</code></li>
+</ul>
+<h2 id="4自定义工具列"><a href="#4自定义工具列" class="headerlink" title="4自定义工具列"></a>4自定义工具列</h2><h3 id="4-1默认工具列"><a href="#4-1默认工具列" class="headerlink" title="4.1默认工具列"></a>4.1默认工具列</h3><p>Options→Toolbars→Files→Default</p>
+<p>C:\Users\==yourname==\AppData\Roaming\McNeel\Rhinoceros\6.0\UI\default.rui</p>
+<h3 id="4-2新增工具列"><a href="#4-2新增工具列" class="headerlink" title="4.2新增工具列"></a>4.2新增工具列</h3><p><code>RBC</code>→<code>NEW</code></p>
+<h3 id="4-3导入工具列"><a href="#4-3导入工具列" class="headerlink" title="4.3导入工具列"></a>4.3导入工具列</h3><p>Options→Toolbars→Files→Default→Close→Import Toolbars</p>
+<h3 id="4-4弹出工具列"><a href="#4-4弹出工具列" class="headerlink" title="4.4弹出工具列"></a>4.4弹出工具列</h3><p>Options→Mouse→Middle mouse button→Popup this Toolbar</p>
+<h3 id="4-5自定义弹出"><a href="#4-5自定义弹出" class="headerlink" title="4.5自定义弹出"></a>4.5自定义弹出</h3><p>移动：<code>Shift</code>+<code>LMB Drag</code></p>
+<p>复制：<code>Ctrl</code>+<code>LMB Drag</code></p>
+<h2 id="5显示模式"><a href="#5显示模式" class="headerlink" title="5显示模式"></a>5显示模式</h2><h3 id="5-1更改显示模式"><a href="#5-1更改显示模式" class="headerlink" title="5.1更改显示模式"></a>5.1更改显示模式</h3><p>视窗左上角标签栏下拉列表，或输入指令：SetDisplayMode_Mode_</p>
+<ol>
+<li>线框模式 Wireframe</li>
+<li>着色模式 Shaded</li>
+<li>渲染模式 Rendered</li>
+<li>半透明模式 Ghosted</li>
+<li>极地模式 Arctic</li>
+<li>光线追踪 Raytraced</li>
+<li>……</li>
+</ol>
+<p>可单独设置物件显示模式 输入指令：SetObjectDisplayMode</p>
+<h3 id="5-2增删显示模式"><a href="#5-2增删显示模式" class="headerlink" title="5.2增删显示模式"></a>5.2增删显示模式</h3><p>Options→View→Display Mode </p>
+<p>New，Copy，Delete，Import ，Export</p>
+<p>……</p>
+<h2 id="6面板"><a href="#6面板" class="headerlink" title="6面板"></a>6面板</h2><ul>
+<li><strong>Display</strong></li>
+<li><strong>Properties</strong></li>
+<li><strong>Layers</strong></li>
+<li>Layer States</li>
+<li>Materials</li>
+<li>Named CPlanes</li>
+<li>Named Views</li>
+<li>……</li>
+</ul>
+<h3 id="6-1-Display"><a href="#6-1-Display" class="headerlink" title="6.1 Display"></a>6.1 Display</h3><p>不同显示模式不同选项</p>
 <ul>
-<li><font size = 5px style="background:Blue">2222222222</font>    竞赛？</li>
+<li>切换模式</li>
+<li>更改背景颜色</li>
+<li>显示选项</li>
+<li>Backface Color 更改艳丽颜色方便观察</li>
+<li>Clipping Plane 勾选Show Fills Show Edges</li>
 </ul>
-<p>Blender:</p>
+<h3 id="6-2Properties"><a href="#6-2Properties" class="headerlink" title="6.2Properties"></a>6.2Properties</h3><p>不同数据类型不同选项</p>
 <ul>
-<li><font size = 5px style="background:Blue">2222222</font>    Polygon Runaway</li>
-<li><font size = 5px style="background:Blue">222222</font>    Animation</li>
-<li><font size = 5px style="background:Blue">2</font>    Cycles</li>
-<li><font size = 5px style="background:Blue">2</font>    Procedural Material</li>
+<li>更改名称</li>
+<li>更改显示颜色打印颜色</li>
+<li>更改线性</li>
+<li>更改显示线宽</li>
+<li>更改材质</li>
+<li>更改UV</li>
+<li>……</li>
 </ul>
-<p>Python:</p>
+<p>切换为打印模式命令 PrintDisplay_Color_Print</p>
+<h3 id="6-3-Layers"><a href="#6-3-Layers" class="headerlink" title="6.3 Layers"></a>6.3 Layers</h3><ul>
+<li>Filters</li>
+<li>Tools</li>
+<li>增加图层与子图层</li>
+<li>复制图层与复制物件</li>
+<li>移动物件所属图层</li>
+<li>……</li>
+</ul>
+<h2 id="7物件的快速变动"><a href="#7物件的快速变动" class="headerlink" title="7物件的快速变动"></a>7物件的快速变动</h2><p>移动：<code>LMB Drag</code></p>
+<p>复制：<code>Alt</code> +<code>LMB Drag</code></p>
+<p>垂直：<code>Ctrl</code>+<code>LMB Drag</code></p>
+<p>正交：F8 或 状态栏Ortho</p>
+<p>Gumball：</p>
 <ul>
-<li><font size = 5px style="background:green">1</font>    Numpy</li>
-<li><font size = 5px style="background:green">1</font>    Pandas</li>
+<li>R→X axis ；G→Y axis ；B→Z axis</li>
+<li>移动：拖动箭头（<code>LMC</code>设置具体数值）</li>
+<li>旋转：拖动弧线（<code>LMC</code>设置具体数值）</li>
+<li>缩放：拖动方块（<code>LMC</code>设置具体数值）</li>
+<li>白色圆圈进行设置</li>
 </ul>
-<p>Html &amp; Css:</p>
-<ul>
-<li><font size = 5px style="background:green">1</font>    看教程</li>
-</ul>
-<p>Substance Design:</p>
-<ul>
-<li><font size = 5px style="background:Blue">2</font>    看教程</li>
-<li><font size = 5px style="background:Blue">2</font>    练习</li>
-</ul>
-<p>After Effects:</p>
-<ul>
-<li><font size = 5px style="background:Blue">2</font>    看教程</li>
-</ul>
-<p>Revit:</p>
-<ul>
-<li><font size = 5px style="background:red">4444444444</font>    Rhino与Revit转换</li>
-</ul>
-<p>一注:</p>
-<ul>
-<li><font size = 5px style="background:green">1</font>    刷题</li>
-</ul>
-<p>English Listening &amp; Speaking:</p>
-<ul>
-<li><font size = 5px style="background:green">1111111111</font>    刷Daily English Dictation 一次学七天的量。</li>
-</ul>
+<p>锁定方向：<code>Tab</code></p>
+<h1 id="三-作业"><a href="#三-作业" class="headerlink" title="三 作业"></a>三 作业</h1><ol>
+<li>定义自己的窗口</li>
+<li>预习指令，思考建模需要那些常用命令，定义自己的工具列中键。</li>
+<li>思考自己以往的课程设计的建模逻辑，思考使用su建模是否还有优化的可能，如何优化。</li>
+</ol>
 
             </article>
             <hr>
@@ -308,9 +410,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Planning/">Planning</a>
-                    
-                      <a class="hover-with-bg" href="/categories/Planning/2020/">2020</a>
+                      <a class="hover-with-bg" href="/categories/Rhinoceros/">Rhinoceros</a>
                     
                   </div>
                 
@@ -318,7 +418,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Planning/">Planning</a>
+                      <a class="hover-with-bg" href="/tags/Rhinoceros/">Rhinoceros</a>
                     
                   </div>
                 
@@ -331,9 +431,9 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/06/25/Blender-Driver%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">
+                      <a href="/2020/07/01/Rhinoceros%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A6%E8%AE%A1%E5%88%92/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Blender-Driver的使用学习</span>
+                        <span class="hidden-mobile">Rhinoceros基础教学计划</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -341,8 +441,8 @@
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/06/23/%E5%AD%A6%E4%B9%A0Substance%20Designer%20blend%E8%8A%82%E7%82%B9%E5%89%8D%EF%BC%8C%E4%BA%86%E8%A7%A3Photoshop%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/">
-                        <span class="hidden-mobile">学习Substance Designer blend节点前，了解Photoshop混合模式</span>
+                      <a href="/2020/06/25/Blender-Driver%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A01/">
+                        <span class="hidden-mobile">Blender Driver的使用学习1</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -530,7 +630,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "学习计划_2020_6&nbsp;",
+        "Rhinoceros Day1&nbsp;",
       ],
       cursorChar: "|",
       typeSpeed: 80,
