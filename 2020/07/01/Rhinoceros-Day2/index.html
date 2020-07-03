@@ -210,7 +210,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      151 字
+      1.6k 字
     </span>
   
 
@@ -220,7 +220,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      17
        分钟
     </span>
   
@@ -272,13 +272,87 @@
 <p>NURBS：<strong>Rhinoceros</strong>，Catia，Alias，Solidworks……</p>
 <p>Polygon：SketchUp，Maya，Modo，<strong>Blender</strong>……</p>
 <h2 id="3曲线"><a href="#3曲线" class="headerlink" title="3曲线"></a>3曲线</h2><p>数学？几何？</p>
-<p> <a href="Rhinoceros-Day2.assets\L-09_BSplines_NURBS.pdf">Computer Graphics Ⅰ CS 430/536 B-Splines and NURBS</a> </p>
+<p><a href="https://pages.mtu.edu/~shene/COURSES/cs3621/NOTES/" target="_blank" rel="noopener">CS3621 Introduction to Computing with Geometry Notes</a></p>
+<p><a href="Rhinoceros-Day2.assets\L-09_BSplines_NURBS.pdf">Computer Graphics Ⅰ CS 430/536 B-Splines and NURBS</a> </p>
 <p>试一试 </p>
 <p><a href="Rhinoceros-Day2.assets\NURBS-en.swf">NURBS-en.swf</a> </p>
 <p>关系</p>
-<p><img src="Rhinoceros-Day2.assets/276683-20180417112712069-742103752.bmp" srcset="/img/loading.gif" alt="关系"></p>
-<h3 id="3-1Beizier"><a href="#3-1Beizier" class="headerlink" title="3.1Beizier"></a>3.1Beizier</h3><h3 id="3-2B-Spline"><a href="#3-2B-Spline" class="headerlink" title="3.2B-Spline"></a>3.2B-Spline</h3><h3 id="3-3NURBS"><a href="#3-3NURBS" class="headerlink" title="3.3NURBS"></a>3.3NURBS</h3><p>公差</p>
+<img src="Rhinoceros-Day2.assets/%E5%90%84%E6%9B%B2%E7%BA%BF%E5%85%B3%E7%B3%BB.bmp" srcset="/img/loading.gif" alt="各曲线关系" style="zoom:100%;" />
+
+<h3 id="3-1Spline"><a href="#3-1Spline" class="headerlink" title="3.1Spline"></a>3.1Spline</h3><p><a href="https://baike.baidu.com/item/样条曲线" target="_blank" rel="noopener">BaiDu</a></p>
+<p>木条→公式</p>
+<img src="Rhinoceros-Day2.assets/%E6%A0%B7%E6%9D%A1.jpg" srcset="/img/loading.gif" alt="样条" style="zoom:33%;" />
+
+<h3 id="3-2Bezier"><a href="#3-2Bezier" class="headerlink" title="3.2Bezier"></a>3.2Bezier</h3><p><a href="[https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A#%E4%BA%8C%E6%AC%A1%E6%96%B9%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A](https://zh.wikipedia.org/wiki/貝茲曲線#二次方貝茲曲線)">Wiki</a></p>
+<p><a href="https://zh.javascript.info/bezier-curve" target="_blank" rel="noopener">JavaScript</a></p>
+<p><strong>Bezier特点：</strong></p>
+<ul>
+<li><strong>阶数=控制点数-1。</strong></li>
+<li>相对于NURBS和B-Spline，Bezier一定是<strong>单跨度</strong>（One Spans）（NURBS曲线的最简结构）。</li>
+<li>控制点影响整条曲线的形状，不能做局部控制和调整。</li>
+<li>拟合复杂造型比较困难（更适合表现光滑形态）。</li>
+<li>高阶（指数+1）的曲线计算比较慢（递归算法，时间复杂度），Rhino允许用户使用最高11阶曲线（核心支持40阶曲线计算）一条线最多12个点。</li>
+<li><strong>不能精确描述标准几何体</strong>（例如圆，圆锥曲线）。<a href="https://zhuanlan.zhihu.com/p/143612707" target="_blank" rel="noopener">为什么贝塞尔曲线无法拟合圆</a></li>
+</ul>
+<p><a href="https://pomax.github.io/bezierinfo/#introduction" target="_blank" rel="noopener">https://pomax.github.io/bezierinfo/#introduction</a></p>
+<p>趣味练习：钢笔贝塞尔<a href="https://bezier.method.ac/" target="_blank" rel="noopener">https://bezier.method.ac/</a></p>
+<h3 id="3-3B-Spline"><a href="#3-3B-Spline" class="headerlink" title="3.3B-Spline"></a>3.3B-Spline</h3><p><a href="https://zh.wikipedia.org/wiki/B样条" target="_blank" rel="noopener">Wiki</a></p>
+<p><strong>B-spline特点：</strong></p>
+<ul>
+<li><strong>阶数&lt;控制点数。</strong></li>
+<li>B-spline可以<strong>多跨结构</strong>（多spans）。</li>
+<li>控制点对曲线可以做局部的形状调整。</li>
+<li>可以用低阶多控制点你和复杂造型。</li>
+<li>没有<strong>控制点数量限制。</strong></li>
+<li><strong>不能精确描述标准几何体</strong>（例如圆，圆锥曲线）</li>
+</ul>
+<p><em>引入*</em>节点（knot）**。节点赋值为等差数列（==均匀==）。</p>
+<p><em>隐藏概念*</em>权重（weight）**。权重赋值列表均为1，所以可在B-spline中忽视权重。</p>
+<h3 id="3-4NURBS"><a href="#3-4NURBS" class="headerlink" title="3.4NURBS"></a>3.4NURBS</h3><p><a href="https://zh.wikipedia.org/wiki/非均匀有理B样条" target="_blank" rel="noopener">Wiki</a></p>
+<p><strong>非均匀有理B样条曲线（Non-Uniform Rational B-Splines）</strong></p>
+<p>知道了B样条，那</p>
+<p>什么是<strong>均匀</strong>？<strong>非均匀</strong>？</p>
+<p>什么是<strong>有理</strong>？<strong>无理</strong>？</p>
+<p><strong>维基定义</strong>：</p>
+<p>Non-Uniform（非均匀性）：是指一个控制顶点的影响力的范围能够改变。当创建一个不规则曲面的时候这一点非常有用。同样，统一的曲线和曲面在透视投影下也不是无变化的，对于交互的3D建模来说这是一个严重的缺陷。</p>
+<p>Rational（有理）：是指每个NURBS物体都可以用有理多项式形式表达式来定义。</p>
+<p>B-Spline（B样条）：是指用路线来构建一条曲线，在一个或更多的点之间以内插值替换的。</p>
+<p>简单地说，NURBS就是专门做曲面物体的一种造型方法。NURBS造型总是由曲线和曲面来定义的，所以要在NURBS表面里生成一条有棱角的边是很困难的。就是因为这一特点，我们可以用它做出各种复杂的曲面造型和表现特殊的效果，如人的皮肤，面貌或流线型的跑车等。</p>
+<p>==均匀性与节点赋值相关==。</p>
+<p>==有理性与权重赋值相关==。</p>
+<p>*观察NURBS曲线挤出形成的曲面，打开控制点，并非均匀排布。</p>
+<p>*<a href="https://knowledge.autodesk.com/zh-hans/support/alias-products/learn-explore/caas/CloudHelp/cloudhelp/2020/CHS/Alias-Modeling/files/GUID-8D6971EF-EDEC-4C66-9CF9-253559A6B640-htm.html" target="_blank" rel="noopener">关于有理几何体与非有理几何体</a>:</p>
+<p><strong>NURBS特点：</strong></p>
+<ul>
+<li>包含Bezier和B-spline能够描述的所有形态。</li>
+<li>增加了控制点权重和节点赋值的功能。</li>
+<li>能精确描述标准集合体。</li>
+</ul>
+<h2 id="4连续性"><a href="#4连续性" class="headerlink" title="4连续性"></a>4连续性</h2><p>在曲面建模时，使用nurbs可以构建复杂的光滑表面的形体，然而只有光滑的表面将会降低这个表面的丰富程度。从设计角度来讲，不止需要非常光滑的表面，也需要粗糙的，尖锐的等等。</p>
+<p><video src="Rhinoceros-Day2.assets/%E8%BD%A6%E8%A1%A8%E9%9D%A2%E8%BF%9E%E7%BB%AD%E6%80%A7.mp4"></video></p>
+<p>观察车身上灯的反光。反映了车表面的光顺程度。尖锐与光滑的有机结合造就了丰富的表面。</p>
+<p>我们暂时不提曲面，说回曲线。</p>
+<p>我们已经了解到，单一曲线的特性是光滑，那如何才能表现尖锐呢？</p>
+<p>聪明的你一定会想到，既然一条线注定是光滑的，那只要有两条线拼接在一起，调整两条线的角度，在接头处就可以是尖锐的了。</p>
+<p>没错，就是这样。由两条线还可以向上扩展，三条线，四条线，无数条线……区别于polygon软件，rhino这样的nurbs软件，就是不断地再将曲线拼接在一起。我们要熟记这一点，并且不断地磨练拼接曲线与曲面的技巧。才能创造更好看有趣的造型。</p>
+<p>那，我们如何定义线与线拼接的光滑程度呢？</p>
+<p>这里引入连续性的概念。</p>
+<p><a href="https://zh.wikipedia.org/wiki/非均匀有理B样条#连续性" target="_blank" rel="noopener">Wiki连续性</a></p>
+<p><a href="http://tips.cn.rhino3d.com/2013/12/rhino-continuity/" target="_blank" rel="noopener">rhino</a></p>
+<p><a href="https://knowledge.autodesk.com/zh-hans/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2018/CHS/Maya-Modeling/files/GUID-A8929016-DC90-45A3-9AD6-7E2555A9BD7B-htm.html" target="_blank" rel="noopener">MAYA</a></p>
+<p><strong>曲率：</strong>曲率是通过将圆与曲线重合，然后取圆形半径的倒数来测量的。在此图中的 x 点处，曲线的最佳绘制方法是使用半径为 r 的圆。在此点处，曲率为 1/r。之所以使用倒数 1/r，而不是 r，是因为平坦直线的半径是无穷大。取其倒数得出的曲率为 0，而不是无穷大。</p>
+<p><strong>问题：</strong></p>
+<p>曲线的连续性是建立在连续之上的，也就是至少为G0，可是”常在河边走，哪能不湿鞋？“，建模过程中总有疏忽的时候会不能完全捕捉到一起，但是有时候当你放大查看，或者测量距离后，发现命名没有重合，但是软件依然判定我们的两个点已经接在了一起，为什么呢？</p>
+<p><strong>精度：</strong></p>
+<p>计算机≠数学，计算机并不是完全精确的。</p>
+<p><a href="https://www.rhino3d.com/cn/accuracy" target="_blank" rel="noopener">Rhino有多精确</a></p>
+<p><strong>公差：</strong></p>
+<p><a href="https://wiki.mcneel.com/zh/rhino/faqtolerances" target="_blank" rel="noopener">了解公差</a></p>
+<p>或许你现在满头雾水，不过没有关系，我和你一样。只有从数学和图形学的角度去了解，才有可能透彻的清楚这些都是什么。或许……建筑师出身的我们，没有机会看懂那些晦涩的公式，弄懂这些概念，但我们可以从实操中慢慢体会。下面，带着疑惑，让我们打开Rhino吧。</p>
+<h1 id="二打开Rhino"><a href="#二打开Rhino" class="headerlink" title="二打开Rhino"></a>二打开Rhino</h1><h2 id="1曲线工具"><a href="#1曲线工具" class="headerlink" title="1曲线工具"></a>1曲线工具</h2><h2 id="2曲面工具"><a href="#2曲面工具" class="headerlink" title="2曲面工具"></a>2曲面工具</h2><p>公差</p>
+<p>UV</p>
 <p>连续性</p>
+<p>建模逻辑：点线面。</p>
 
             </article>
             <hr>
