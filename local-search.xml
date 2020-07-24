@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>在Blender中导入GoogleMapd模</title>
+    <link href="/2020/07/24/%E5%9C%A8Blender%E4%B8%AD%E5%AF%BC%E5%85%A5GoogleMapd%E6%A8%A1%E5%9E%8B/"/>
+    <url>/2020/07/24/%E5%9C%A8Blender%E4%B8%AD%E5%AF%BC%E5%85%A5GoogleMapd%E6%A8%A1%E5%9E%8B/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><span style="background:yellow"> 阅读前提示：</span></p><ol><li><strong>请无梯读者和纯中文字符阅读读者关闭本篇教程。</strong></li><li><strong>本教程是个人学习笔记，借鉴了许多其他教程内容，并非手把手，并非复制粘贴。同时也因能力有限，不能保证所有内容正确且适用于所有人。因阅读后，操作出现问题与损失，后果请由读者自身承担。</strong></li><li><strong>教程针对Windows系统，其它系统不做解释。</strong></li><li><strong>感谢支持，笔芯♥，么么哒。</strong></li></ol><h1 id="1-前期准备"><a href="#1-前期准备" class="headerlink" title="1 前期准备"></a>1 前期准备</h1><p>软件下载</p><h2 id="1-1-Blender"><a href="#1-1-Blender" class="headerlink" title="1.1 Blender"></a>1.1 Blender</h2><p><a href="https://www.blender.org/download/" target="_blank" rel="noopener">https://www.blender.org/download/</a></p><h2 id="1-2-MapsModelsImporter"><a href="#1-2-MapsModelsImporter" class="headerlink" title="1.2 MapsModelsImporter"></a>1.2 MapsModelsImporter</h2><p><a href="https://github.com/eliemichel/MapsModelsImporter/releases" target="_blank" rel="noopener">https://github.com/eliemichel/MapsModelsImporter/releases</a></p><h2 id="1-3-Renderdoc"><a href="#1-3-Renderdoc" class="headerlink" title="1.3 Renderdoc"></a>1.3 Renderdoc</h2><p><a href="https://renderdoc.org/builds" target="_blank" rel="noopener">https://renderdoc.org/builds</a></p><h2 id="1-4-Chrome"><a href="#1-4-Chrome" class="headerlink" title="1.4 Chrome"></a>1.4 Chrome</h2><p><a href="https://www.google.com/intl/zh-CN/chrome/" target="_blank" rel="noopener">https://www.google.com/intl/zh-CN/chrome/</a></p><h1 id="2-中期准备"><a href="#2-中期准备" class="headerlink" title="2 中期准备"></a>2 中期准备</h1><p>配置</p><h2 id="2-1-MapsModelsImporter安装"><a href="#2-1-MapsModelsImporter安装" class="headerlink" title="2.1 MapsModelsImporter安装"></a>2.1 MapsModelsImporter安装</h2><p>在Blender中安装MapsModelsImporter</p><h2 id="2-2-Chrome配置"><a href="#2-2-Chrome配置" class="headerlink" title="2.2 Chrome配置"></a>2.2 Chrome配置</h2><p><span style="background:yellow"><strong><em>重点</em></strong>：</span></p><ol><li>“C:\Program Files (x86)\Google\Chrome\Application”在这个目录下找到<code>chrome.exe</code>。</li><li><code>RMC</code>此文件，<code>LMC</code>“Create shortcut”。</li><li>回到桌面<code>RMC</code>刚刚创建的快捷方式，<code>RMC</code>“Properties”。</li><li>在”Target”栏中内容全部删除。</li><li>将步骤6中的文本复制到”Target”栏中</li><li>C:\Windows\System32\cmd.exe /c “SET RENDERDOC_HOOK_EGL=0 &amp;&amp; START “” ^”C:\Program Files (x86)\Google\Chrome\Application\chrome.exe^” –disable-gpu-sandbox –gpu-startup-dialog”</li><li><code>LMC</code> <code>OK</code>。</li><li>快捷方式变为命令行图标。</li></ol><h1 id="3-操作"><a href="#3-操作" class="headerlink" title="3 操作"></a>3 操作</h1><ol><li><code>DLMC</code>chrome快捷方式。将弹窗中“Gpu starting with pid : ”后面的一串数字文本背下来。</li><li>打开RenderDoc→File→Inject into Process→在右侧中部搜索栏中将背下来的数字写下→<code>DLMC</code>上方搜索出的以”Google Chrome Gpu“为Window Title的process。</li><li>回到Chrome，<code>RMC</code>点击弹窗的“OK”。Chrome上方有背景为透明深灰的提示文本。</li><li>在<a href="https://www.google.com/maps/" target="_blank" rel="noopener">GoogleMap</a>中搜索地点。注意切换Satellite View。</li><li>在RenderDoc中点击”Capture After Delay“（设置秒数）或在Chrome中<code>LMC</code> <code>PRINT SCREEN</code>。</li><li>同时迅速<code>LMBD</code>晃动地图（刷新截图）。</li><li>回到RenderDoc。<code>DLMC</code>Captures collected中做好的截图→File→Save Capture As→命名后<code>LMC</code>”Save“</li><li>打开blender→File→Import→Google Maps Capture→选中刚保存的”.rdc“文件（注意右侧Max Blocks）→”Import…”</li><li>等待。</li><li>完成。</li><li>stitch和pack需要购买插件。</li></ol><h1 id="4-参考"><a href="#4-参考" class="headerlink" title="4 参考"></a>4 参考</h1><p><a href="https://github.com/eliemichel/MapsModelsImporter" target="_blank" rel="noopener">https://github.com/eliemichel/MapsModelsImporter</a></p><p><a href="https://www.youtube.com/watch?v=X6Q7dbtXVZQ" target="_blank" rel="noopener">https://www.youtube.com/watch?v=X6Q7dbtXVZQ</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Rhinoceros Day2</title>
     <link href="/2020/07/01/Rhinoceros-Day2/"/>
     <url>/2020/07/01/Rhinoceros-Day2/</url>
