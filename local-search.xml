@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>学习计划_2020_8</title>
+    <link href="/2020/08/02/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92-2020-8/"/>
+    <url>/2020/08/02/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92-2020-8/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>[toc]</p><h1 id="泛学习："><a href="#泛学习：" class="headerlink" title="泛学习："></a>泛学习：</h1><ol><li>镜头运动和设置</li><li>过场设计</li><li>Blender 2D Animation</li><li>Blender Grease Pencil</li><li>Blender Freestyle 出线图</li><li>Blender Composition</li><li>Blender Animation Node</li><li>Blender NPR (Manga shader)</li></ol><h1 id="学习教程与书目："><a href="#学习教程与书目：" class="headerlink" title="学习教程与书目："></a>学习教程与书目：</h1><ol><li>《Real Time Motion Graphic》 硬盘</li><li>烟灰 《烟灰的Grasshopper动画方法论》 犀流堂</li><li>谢雨帆 《Grasshopper动态 系列教程》 B站</li><li>《Nature of code》书 硬盘</li><li>闫令琪 《现代计算机图形学入门》 硬盘</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Planning</category>
+      
+      <category>2020</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Planning</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>使用Blender插件VI-Suite做建筑性能模拟（一）————Shadow Mapping</title>
+    <link href="/2020/07/27/%E4%BD%BF%E7%94%A8Blender%E6%8F%92%E4%BB%B6VI-Suite%E5%81%9A%E5%BB%BA%E7%AD%91%E6%80%A7%E8%83%BD%E6%A8%A1%E6%8B%9F/"/>
+    <url>/2020/07/27/%E4%BD%BF%E7%94%A8Blender%E6%8F%92%E4%BB%B6VI-Suite%E5%81%9A%E5%BB%BA%E7%AD%91%E6%80%A7%E8%83%BD%E6%A8%A1%E6%8B%9F/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="1-前期准备"><a href="#1-前期准备" class="headerlink" title="1 前期准备"></a>1 前期准备</h1><p>软件插件下载</p><h2 id="1-1-Blender"><a href="#1-1-Blender" class="headerlink" title="1.1 Blender"></a>1.1 Blender</h2><p><a href="https://www.blender.org/download/" target="_blank" rel="noopener">https://www.blender.org/download/</a></p><h2 id="1-2-VI-Suite"><a href="#1-2-VI-Suite" class="headerlink" title="1.2 VI-Suite"></a>1.2 VI-Suite</h2><p><a href="https://github.com/rgsouthall/vi-suite06" target="_blank" rel="noopener">https://github.com/rgsouthall/vi-suite06</a></p><h1 id="2-VI-Suite安装"><a href="#2-VI-Suite安装" class="headerlink" title="2 VI-Suite安装"></a>2 VI-Suite安装</h1><h1 id="3-操作"><a href="#3-操作" class="headerlink" title="3 操作"></a>3 操作</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+      <tag>VI-Suite</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>在Blender中导入GoogleMapd模</title>
     <link href="/2020/07/24/%E5%9C%A8Blender%E4%B8%AD%E5%AF%BC%E5%85%A5GoogleMapd%E6%A8%A1%E5%9E%8B/"/>
     <url>/2020/07/24/%E5%9C%A8Blender%E4%B8%AD%E5%AF%BC%E5%85%A5GoogleMapd%E6%A8%A1%E5%9E%8B/</url>
